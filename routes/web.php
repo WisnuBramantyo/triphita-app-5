@@ -39,10 +39,6 @@ Route::get('/', function () {
 });
 
 Route::get('/search', [DestinationController::class, 'search'])->name('search');
-// Route::get('/search', [HotelController::class, 'search'])->name('search');
-
-// Route::get('/', [HotelController::class, 'search'])->name('hotel.search');
-// Route::get('/', [TourController::class, 'search'])->name('tour.search');
 Route::get('/destination', [DestinationController::class, 'search'])->name('destination.search');
 Route::get('/hotel', [HotelController::class, 'search'])->name('hotel.search');
 
