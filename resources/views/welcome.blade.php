@@ -25,19 +25,41 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<style>
+		.project-destination .img:hover .hover-text {
+			display: block !important;
+		}
+
+		.project-destination .text {
+			position: relative;
+			z-index: 1;
+		}
+
+		.project-destination .hover-text {
+			background: rgba(0, 0, 0, 0.7);
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 5px;
+		}
+	</style>
+
 </head>
 <body>
+	<!-- Navigation Menu -->
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-sticky" id="ftco-navbar">
+		<!-- Brand Logo and Name -->
 		<div class="container">
-			<a class="navbar-brand" href="/">Triphita<span>Eco Tours and Hotels</span></a>
+			<a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and Tours</span></a>
+			<!-- Mobile Menu Toggle Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
+			<!-- Navigation Links -->
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
+					<!-- Active state for current page -->
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="destination" class="nav-link">Tours</a></li>
 					<li class="nav-item"><a href="hotel" class="nav-link">Hotel</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
@@ -54,11 +76,8 @@
 			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
 				<div class="col-md-7 ftco-animate">
 					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
-					<p class="caps">Travel to the any corner of the world, without going around in circles</p>
+					<p class="caps">Travel to the corner of the world, sustainably</p>
 				</div>
-				<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-					<span class="fa fa-play"></span>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -68,11 +87,14 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="ftco-search d-flex justify-content-center">
+						<!-- Tab Navigation -->
 						<div class="row">
 							<div class="col-md-12 nav-link-wrap">
 								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+									<!-- Hotel Search Tab Button -->
 									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Search Hotel</a>
 
+									<!-- Tour Search Tab Button -->
 									<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Search Tour</a>
 
 								</div>
@@ -80,11 +102,9 @@
 							<div class="col-md-12 tab-wrap">
 								
 								<div class="tab-content" id="v-pills-tabContent">
-									{{-- Hotel Menu --}}
+									<!-- Hotel Search Form -->
 									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                        <form action="{{ route('hotel.search') }}" method="GET" class="search-property-1">
-										{{-- <form action="{{ route('destination.search') }}" method="GET" class="search-property-1"> --}}
-    
+										<form action="{{ route('hotel.search') }}" method="GET" class="search-property-1">
 											<div class="row no-gutters">
 												<div class="col-md d-flex">
 													<div class="form-group p-4 border-0">
@@ -92,7 +112,6 @@
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
 															<input type="text" class="form-control" id="hotel" name="hotel" value="{{ request('hotel') }}" placeholder="Search hotel">
-                                                            {{-- <input type="text" id="destination" name="destination" value="{{ request('destination') }}"> --}}
 														</div>
 													</div>
 												</div>
@@ -116,23 +135,23 @@
 													</div>
 												</div>
 												<div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="rooms">Room</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select id="rooms" name="rooms" class="form-control">
-                                                                    <option value="">1</option>
-                                                                    <option value="">2</option>
-                                                                    <option value="">3</option>
-                                                                    <option value="">4</option>
-                                                                    <option value="">5</option>
-                                                                    <option value="">More than 5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+													<div class="form-group p-4">
+														<label for="rooms">Room</label>
+														<div class="form-field">
+															<div class="select-wrap">
+																<div class="icon"><span class="fa fa-chevron-down"></span></div>
+																<select id="rooms" name="rooms" class="form-control">
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">More than 5</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
 												
 												<div class="col-md d-flex">
 													<div class="form-group d-flex w-100 border-0">
@@ -145,17 +164,15 @@
 										</form>
 									</div>
 
-									{{-- Tour Menu --}}
+									<!-- Tour Search Form -->
 									<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-										{{-- <form action="#" class="search-property-1"> --}}
-											<form action="{{ route('destination.search') }}" method="GET" class="search-property-1">
+										<form action="{{ route('destination.search') }}" method="GET" class="search-property-1">
 											<div class="row no-gutters">
 												<div class="col-lg d-flex">
 													<div class="form-group p-4 border-0">
 														<label for="#">Tour Destination</label>
 														<div class="form-field">
 															<div class="icon"><span class="fa fa-search"></span></div>
-															{{-- <input type="text" class="form-control" placeholder="Search place"> --}}
 															<input type="text" class="form-control" id="destination" name="destination" value="{{ request('destination') }}" placeholder="Search place">
 														</div>
 													</div>
@@ -199,54 +216,49 @@
 
 		<section class="ftco-section services-section">
 			<div class="container">
+				<div class="row justify-content-center pb-4">
+					<div class="col-md-12 heading-section text-center ftco-animate">
+						<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita</h2>
+					</div>
+				</div>
 				<div class="row d-flex">
 					<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-						<div class="w-100">
-							{{-- <span class="subheading">Welcome to Pacific</span> --}}
-							<h2 class="mb-4">It's time to start your adventure</h2>
-							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-							A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-							<p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p>
+						<div class="w-100" style="text-align: justify; font-size: 1.1em;">
+							<p>Our story begins on the paradise island of Bali, a land once celebrated for its rich culture, untouched nature, and vibrant traditions. From its breathtaking beaches to its mesmerizing dances, intricate crafts, and the warm smiles of its people, Bali was a true haven for the soul. </p>
+							<p>But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
+							<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. </p>
+							<p>Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
+							<p><a href="#" class="btn btn-primary py-3 px-4">Search Accommodation</a></p>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+						<!-- Services Section - Displays Sustainable Accommodation and Tours -->
+						<div class="row flex-column">
+							<div class="col-md-12 mb-4">
 								<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-paragliding"></span>
+									</div>
 									<div class="media-body">
-										<h3 class="heading mb-3">Activities</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+										<h3 class="heading mb-3">Sustainable Accommodation (Beta)</h3>
+										<p>Stays in our curated eco-friendly accommodation, designed to blend comfort, sustainability, and local culture seamlessly.</p>
+										<p>Each property adheres to our 8 sustainability criteria, ensuring your visit leaves a positive impact on the environment and community</p>
 									</div>
 								</div>      
 							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+
+							<!-- Sustainable Tours Box -->
+							<div class="col-md-12">
 								<div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-route"></span>
+									</div>
 									<div class="media-body">
-										<h3 class="heading mb-3">Travel Arrangements</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
+										<h3 class="heading mb-3">Sustainable Tours (Coming Soon)</h3>
+										<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
+										<p>Designed to protect the environment and celebrate traditions, our tours ensure unforgettable experiences that leave a positive impact on the places you visit</p>
 									</div>
 								</div>    
-							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Private Guide</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>      
-							</div>
-							<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-								<div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
-									<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
-									<div class="media-body">
-										<h3 class="heading mb-3">Location Manager</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary</p>
-									</div>
-								</div>      
 							</div>
 						</div>
 					</div>
@@ -263,56 +275,106 @@
 					</div>
 				</div>
 			</div>
-			<div class="container container-2">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="carousel-destination owl-carousel ftco-animate">
+							<!-- Individual Carousel Items with Hover Effect -->
 							<div class="item">
 								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/sustainable-materials.webp);">
+									<!-- Image with Hover Text -->
+									<a class="img" style="background-image: url(images/sustainable-materials.webp);">
 										<div class="text">
-											<h3>Sustainable Materials</h3>
-											{{-- <span>8 Tours</span> --}}
+											<!-- Title Always Visible -->
+											<h3>Clean Energy and Transportation</h3>
+											<!-- Description Shows on Hover -->
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Focus on sustainable energy sources and eco-friendly transport solutions.</span>
+											</div>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/energy-efficiency.webp);">
+									<a class="img" style="background-image: url(images/energy-efficiency.webp);">
 										<div class="text">
-											<h3>Energy Efficiency</h3>
-											{{-- <span>2 Tours</span> --}}
+											<h3>Water Conservation and Management</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Emphasize efficient use and preservation of water resources.</span>
+											</div>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/water-conservation.png);">
+									<a class="img" style="background-image: url(images/water-conservation.png);">
 										<div class="text">
-											<h3>Water Conservation</h3>
-											{{-- <span>5 Tours</span> --}}
+											<h3>Sustainable Food Systems</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Promote locally sourced, eco-friendly, and ethical food practices.</span>
+											</div>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/waste-reduction.png);">
+									<a class="img" style="background-image: url(images/waste-reduction.png);">
 										<div class="text">
-											<h3>Waste Reduction</h3>
-											{{-- <span>5 Tours</span> --}}
+											<h3>Waste Reduction and Recycling</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Commit to minimizing waste and implementing effective recycling programs.</span>
+											</div>
 										</div>
 									</a>
 								</div>
 							</div>
 							<div class="item">
 								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/local-sourcing.jpg);">
+									<a class="img" style="background-image: url(images/local-sourcing.jpg);">
 										<div class="text">
-											<h3>Local Sourcing</h3>
-											{{-- <span>7 Tours</span> --}}
+											<h3>Sustainable Materials and Products</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Encourage the use of eco-friendly building materials and non-toxic products, such as cleaning supplies.</span>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="project-destination">
+									<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+										<div class="text">
+											<h3>People and Community Well-being</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Support local communities, fair practices, and employee welfare.</span>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="project-destination">
+									<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+										<div class="text">
+											<h3>Cultural Preservation and Enrichment</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Uphold and celebrate local traditions, arts, and heritage.</span>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="project-destination">
+									<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+										<div class="text">
+											<h3>Sustainable Governance and Policies</h3>
+											<div class="hover-text" style="display: none; transition: all 0.3s ease;">
+												<span>Establish clear sustainability commitments, transparent policies, and compliance with regulations.</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -334,12 +396,17 @@
 				<div class="row">
 					<div class="col-md-4 ftco-animate">
 						<div class="project-wrap">
+							<!-- Property Image with Price Tag -->
 							<a href="#" class="img" style="background-image: url(images/destination-1.jpg);">
 								<span class="price">$550/person</span>
 							</a>
+							<!-- Property Details -->
 							<div class="text p-4">
+								<!-- Property Name -->
 								<h3><a href="#">Banaue Rice Terraces</a></h3>
+								<!-- Location with Icon -->
 								<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+								<!-- Amenity Icons -->
 								<ul>
 									<li><span class="flaticon-shower"></span>2</li>
 									<li><span class="flaticon-king-size"></span>3</li>
@@ -451,20 +518,6 @@
 				<div class="row d-flex">
 					<div class="col-md-12 about-intro">
 						<div class="row">
-							<div class="col-md-6 d-flex align-items-stretch">
-								<div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
-								</div>
-							</div>
-							<div class="col-md-6 pl-md-5 py-5">
-								<div class="row justify-content-start pb-3">
-									<div class="col-md-12 heading-section ftco-animate">
-										<span class="subheading">About Us</span>
-										<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-										<p><a href="#" class="btn btn-primary">Book Your Destination</a></p>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -674,8 +727,8 @@
 					<div class="col-md-12 text-center">
 						<div class="img"  style="background-image: url(images/bg_2.jpg);">
 							<div class="overlay"></div>
-							<h2>We Are Triphita A Eco-Tour and Hotel </h2>
-							<p>We can manage your dream building A small river named Duden flows by their place</p>
+							<h2>We Are Triphita An Eco Stays and Tours </h2>
+							<p>We will make your days unforgettable and truly sustainable</p>
 							<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Book Now</a></p>
 						</div>
 					</div>
@@ -699,8 +752,9 @@
 					</div>
 					<div class="col-md pt-5 border-left">
 						<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-							<h2 class="ftco-heading-2">Infromation</h2>
+							<h2 class="ftco-heading-2">Information</h2>
 							<ul class="list-unstyled">
+								<li><a href="about.html" class="py-2 d-block">About Us</a></li>
 								<li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
 								<li><a href="#" class="py-2 d-block">General Enquiries</a></li>
 								<li><a href="#" class="py-2 d-block">Booking Conditions</a></li>

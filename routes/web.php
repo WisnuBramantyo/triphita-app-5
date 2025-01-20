@@ -8,14 +8,6 @@ use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\BookingController;
 
 Route::post('/submit-booking', [BookingController::class, 'booking'])->name('submit-booking');
-// Route::get('/submit-booking', function () {
-//     return redirect()->back()->withErrors(['error' => 'This action is not supported.']);
-// });
-
-
-// Route::post('/submit-booking', [BookingController::class, 'booking'])->name('booking');
-
-// Route::post('/booking',[BookingController::class, 'booking']);
 
 Route::get('/payment', function () {
     return view('payment');
