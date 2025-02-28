@@ -51,6 +51,29 @@
                 height: 30vh; /* Smaller height for smaller devices */
             }
         }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .carousel-indicators {
+            margin-bottom: 0.5rem;
+        }
+        
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -65,8 +88,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="destination" class="nav-link">Destination</a></li>
+                    <li class="nav-item"><a href="destination" class="nav-link">Tour</a></li>
                     <li class="nav-item active"><a href="hotel" class="nav-link">Hotel</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -82,23 +104,53 @@
         <!-- Hotel Images Section -->
         <div class="container-rooms-images">
             <div id="hotelImagesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Add Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/potato-room-1.webp" class="d-block w-100 img-fluid rounded" alt="Hotel Main">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="/images/eco-stays-6.webp" class="d-block w-100 img-fluid rounded" alt="Hotel Main">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Hotel Main View</h5>
+                            <p>Experience luxury at its finest</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/potato-room-2.jpg" class="d-block w-100 img-fluid rounded" alt="Room 1">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="/images/eco-stays-2.webp" class="d-block w-100 img-fluid rounded" alt="Room 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Elegant Rooms</h5>
+                            <p>Comfort meets style</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/potato-room-3.webp" class="d-block w-100 img-fluid rounded" alt="Room 2">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="/images/eco-stays-3.webp" class="d-block w-100 img-fluid rounded" alt="Room 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Modern Amenities</h5>
+                            <p>Everything you need for a perfect stay</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/potato-room-4.jpg" class="d-block w-100 img-fluid rounded" alt="Pool">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="/images/eco-stays-4.webp" class="d-block w-100 img-fluid rounded" alt="Pool">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Swimming Pool</h5>
+                            <p>Relax and unwind</p>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/images/potato-room-5.jpg" class="d-block w-100 img-fluid rounded" alt="Dining Area">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="/images/eco-stays-5.webp" class="d-block w-100 img-fluid rounded" alt="Dining Area">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Dining Area</h5>
+                            <p>Savor delicious meals in style</p>
+                        </div>
                     </div>
                 </div>
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#hotelImagesCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -136,7 +188,7 @@
             <div class="room mb-4 p-3 border rounded">
                 <div class="row align-items-center">
                     <div class="col-md-3">
-                        <img src="/images/potato-room-7.jpg" class="img-fluid rounded" alt="Deluxe Queen">
+                        <img src="/images/potato-room-3.webp" class="img-fluid rounded" alt="Deluxe Queen">
                     </div>
                     <div class="col-md-6">
                         <h3>Deluxe Queen</h3>
@@ -167,5 +219,10 @@
     <script src="/js/bootstrap-datepicker.js"></script>
     <script src="/js/scrollax.min.js"></script>
     <script src="/js/main.js"></script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous"></script>
 </body>
 </html>
