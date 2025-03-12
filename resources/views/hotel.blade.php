@@ -35,7 +35,7 @@
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
          <li class="nav-item"><a href="destination" class="nav-link">Tour</a></li>
-         <li class="nav-item"><a href="hotel" class="nav-link">Hotel</a></li>
+         <li class="nav-item active"><a href="hotel" class="nav-link">Hotel</a></li>
          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
        </ul>
