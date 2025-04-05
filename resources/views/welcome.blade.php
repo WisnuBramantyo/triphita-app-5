@@ -284,7 +284,7 @@
 						<div class="item">
 							<div class="project-destination">
 								<!-- Image with Hover Text -->
-								<a class="img" style="background-image: url(images/sustainable-materials.webp);">
+								<a class="img" style="background-image: url('/images/sustainable-materials.webp');">
 									<div class="text">
 										<!-- Title Always Visible -->
 										<h3>Clean Energy and Transportation</h3>
@@ -298,7 +298,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/energy-efficiency.webp);">
+								<a class="img" style="background-image: url('images/energy-efficiency.webp');">
 									<div class="text">
 										<h3>Water Conservation and Management</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -310,7 +310,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/water-conservation.png);">
+								<a class="img" style="background-image: url('images/water-conservation.png');">
 									<div class="text">
 										<h3>Sustainable Food Systems</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -322,7 +322,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/waste-reduction.png);">
+								<a class="img" style="background-image: url('images/waste-reduction.png');">
 									<div class="text">
 										<h3>Waste Reduction and Recycling</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -334,7 +334,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Sustainable Materials and Products</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -346,7 +346,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>People and Community Well-being</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -358,7 +358,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Cultural Preservation and Enrichment</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -370,7 +370,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url(images/local-sourcing.jpg);">
+								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
 									<div class="text">
 										<h3>Sustainable Governance and Policies</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
