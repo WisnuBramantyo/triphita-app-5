@@ -5,6 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
+	<!-- Add Lodgify script here, before other scripts -->
+	<script src="https://static.lodgify.com/widgets/search-bar/latest/index.js"></script>
+	
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
@@ -49,7 +52,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-sticky" id="ftco-navbar">
 		<!-- Brand Logo and Name -->
 		<div class="container">
-			<a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and Tours</span></a>
+			<a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and More</span></a>
 			<!-- Mobile Menu Toggle Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
@@ -60,8 +63,8 @@
 				<ul class="navbar-nav ml-auto">
 					<!-- Active state for current page -->
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="destination" class="nav-link">Tour</a></li>
-					<li class="nav-item"><a href="hotel" class="nav-link">Hotel</a></li>
+					<li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Stays</a></li>
+					<li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 				</ul>
@@ -86,129 +89,75 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="ftco-search d-flex justify-content-center">
-						<!-- Tab Navigation -->
-						<div class="row">
-							<div class="col-md-12 nav-link-wrap">
-								<div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-									<!-- Hotel Search Tab Button -->
-									<a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Search Hotel</a>
+					<div class="ftco-search">
+						<!-- Remove the existing tab structure and just keep the Lodgify search bar -->
+						
 
-									<!-- Tour Search Tab Button -->
-									<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Search Tour</a>
+						<style>
+							:root {
+							  --ldg-psb-background: #ffffff;
+							  --ldg-psb-border-radius: 0.42em;
+							  --ldg-psb-box-shadow: 0px 24px 54px 0px rgba(0, 0, 0, 0.1);
+							  --ldg-psb-padding: 14px;
+							  --ldg-psb-input-background: #ffffff;
+							  --ldg-psb-button-border-radius: 3.58em;
+							  --ldg-psb-color-primary: #037d5d;
+							  --ldg-psb-color-primary-lighter:#81beae;
+							  --ldg-psb-color-primary-darker: #023f2f;
+							  --ldg-psb-color-primary-contrast: #ffffff;
+							  --ldg-semantic-color-primary:  #037d5d;
+							  --ldg-semantic-color-primary-lighter: #81beae;
+							  --ldg-semantic-color-primary-darker: #023f2f;
+							  --ldg-semantic-color-primary-contrast: #ffffff;
+							  --ldg-component-modal-z-index: 999;
+							}
+							#lodgify-search-bar {
+							  position: relative;
+							  z-index: 999;
+							  width:100%;
+							}
+						  </style>
+						  <div
+							id="lodgify-search-bar"
+							data-website-id="558326"
+							data-language-code="en"
+							data-search-page-url='https://wisnu-bramantyo.lodgify.com/en/all-properties'
+							
+							data-dates-check-in-label='Check-in'
+							data-dates-check-out-label='Check-out'
+							data-guests-counter-label='Guests'
+							data-guests-input-singular-label='guest'
+							data-guests-input-plural-label='guests'
+							data-location-input-label='Search Stays'
+							data-search-button-label='Search'
+							data-dates-input-min-stay-tooltip-text='{"one":"Minimum {minStay} night","other":"Minimum {minStay} nights"}'
+							data-guests-breakdown-label='Guests'
+							data-adults-label='{"one":"adult","other":"adults"}'
+							data-adults-description='Ages {minAge} or above'
+							data-children-label='{"one":"child","other":"children"}'
+							data-children-description='Ages {minAge}-{maxAge}'
+							data-children-not-allowed-label='Not suitable for children'
+							data-infants-label='{"one":"infant","other":"infants"}'
+							data-infants-description='Under {maxAge}'
+							data-infants-not-allowed-label='Not suitable for infants'
+							data-pets-label='{"one":"pet","other":"pets"}'
+							data-pets-not-allowed-label='Not allowed'
+							data-done-label='Done'
+							
+							data-new-tab="false"
+							data-version="stable"
+						  ></div>
 
-								</div>
-							</div>
-							<div class="col-md-12 tab-wrap">
-								
-								<div class="tab-content" id="v-pills-tabContent">
-									<!-- Hotel Search Form -->
-									<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-										<form action="{{ route('hotel.search') }}" method="GET" class="search-property-1">
-											<div class="row no-gutters">
-												<div class="col-md d-flex">
-													<div class="form-group p-4 border-0">
-														<label for="hotel">Destination</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control" id="hotel" name="hotel" value="{{ request('hotel') }}" placeholder="Search hotel">
-														</div>
-													</div>
-												</div>
 
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-in date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-out date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-md d-flex">
-													<div class="form-group p-4">
-														<label for="rooms">Room</label>
-														<div class="form-field">
-															<div class="select-wrap">
-																<div class="icon"><span class="fa fa-chevron-down"></span></div>
-																<select id="rooms" name="rooms" class="form-control">
-																	<option value="">1</option>
-																	<option value="">2</option>
-																	<option value="">3</option>
-																	<option value="">4</option>
-																	<option value="">5</option>
-																	<option value="">More than 5</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-												<div class="col-md d-flex">
-													<div class="form-group d-flex w-100 border-0">
-														<div class="form-field w-100 align-items-center d-flex">
-															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-
-									<!-- Tour Search Form -->
-									<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-										<form action="{{ route('destination.search') }}" method="GET" class="search-property-1">
-											<div class="row no-gutters">
-												<div class="col-lg d-flex">
-													<div class="form-group p-4 border-0">
-														<label for="#">Tour Destination</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-search"></span></div>
-															<input type="text" class="form-control" id="destination" name="destination" value="{{ request('destination') }}" placeholder="Search place">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-in date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkin_date" placeholder="Check In Date">
-														</div>
-													</div>
-												</div>
-												<div class="col-lg d-flex">
-													<div class="form-group p-4">
-														<label for="#">Check-out date</label>
-														<div class="form-field">
-															<div class="icon"><span class="fa fa-calendar"></span></div>
-															<input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-														</div>
-													</div>
-												</div>
-
-												<div class="col-lg d-flex">
-													<div class="form-group d-flex w-100 border-0">
-														<div class="form-field w-100 align-items-center d-flex">
-															<input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary">
-														</div>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
+						  
+						<script>
+							document.addEventListener('DOMContentLoaded', function() {
+								// Force re-initialization of Lodgify search bar
+								if (window.LodgifySearchBar) {
+									window.LodgifySearchBar.init();
+								}
+							});
+						</script>
 					</div>
 				</div>
 			</div>
@@ -236,7 +185,7 @@
 					<!-- Services Section - Displays Sustainable Accommodation and Tours -->
 					<div class="row flex-column">
 						<div class="col-md-12 mb-4">
-							<div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
+							<div class="services services-1 color-1 d-block img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
 								<div class="icon d-flex align-items-center justify-content-center">
 									<span class="flaticon-paragliding"></span>
 								</div>
@@ -250,12 +199,12 @@
 
 						<!-- Sustainable Tours Box -->
 						<div class="col-md-12">
-							<div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
+							<div class="services services-1 color-2 d-block img" style="background-image: url(images/kkc-jeep-tour.jpg);">
 								<div class="icon d-flex align-items-center justify-content-center">
 									<span class="flaticon-route"></span>
 								</div>
 								<div class="media-body">
-									<h3 class="heading mb-3">Sustainable Tours (Coming Soon)</h3>
+									<h3 class="heading mb-3">Sustainable Experience (Coming Soon)</h3>
 									<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
 									<p>Designed to protect the environment and celebrate traditions, our tours ensure unforgettable experiences that leave a positive impact on the places you visit</p>
 								</div>
@@ -391,22 +340,22 @@
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="subheading">Destination</span>
-					<h2 class="mb-4">Featured Accommodation</h2>
+					<h2 class="mb-4">Featured Experience</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
 						<!-- Property Image with Price Tag -->
-						<a href="#" class="img" style="background-image: url(images/destination-1.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-fire.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<!-- Property Details -->
 						<div class="text p-4">
 							<!-- Property Name -->
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
 							<!-- Location with Icon -->
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<!-- Amenity Icons -->
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -418,32 +367,32 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/destination-2.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sunrise.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
 								<li><span class="flaticon-king-size"></span>3</li>
-								<li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+								<li><span class="flaticon-sun-umbrella"></span>Near Mountain</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/destination-3.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sunset.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
 								<li><span class="flaticon-king-size"></span>3</li>
-								<li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+								<li><span class="flaticon-sun-umbrella"></span>Near Mountain</li>
 							</ul>
 						</div>
 					</div>
@@ -451,56 +400,55 @@
 
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/destination-4.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-welcome.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
 								<li><span class="flaticon-king-size"></span>3</li>
-								<li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+								<li><span class="flaticon-sun-umbrella"></span>Near Mountain</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/destination-5.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-jeep-tour.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
 								<li><span class="flaticon-king-size"></span>3</li>
-								<li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+								<li><span class="flaticon-sun-umbrella"></span>Near Mountain</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="#" class="img" style="background-image: url(images/destination-6.jpg);">
+						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="#">Banaue Rice Terraces</a></h3>
-							<p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
+							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
 								<li><span class="flaticon-king-size"></span>3</li>
-								<li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+								<li><span class="flaticon-sun-umbrella"></span>Near Mountain</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	
+	</section>	
 	<section class="ftco-section ftco-about img"style="background-image: url(images/bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container py-md-5">
@@ -728,7 +676,7 @@
 				<div class="col-md-12 text-center">
 					<div class="img"  style="background-image: url(images/bg_2.jpg);">
 						<div class="overlay"></div>
-						<h2>We Are Triphita An Eco Stays and Tours </h2>
+						<h2>We Are Triphita An Eco Stays and More </h2>
 						<p>We will make your days unforgettable and truly sustainable</p>
 						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Book Now</a></p>
 					</div>
@@ -770,7 +718,7 @@
 						<h2 class="ftco-heading-2">Experience</h2>
 						<ul class="list-unstyled">
 							<li><a href="#" class="py-2 d-block">Adventure</a></li>
-							<li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
+							<li><a href="#" class="py-2 d-block">Accommodation and Restaurant</a></li>
 							<li><a href="#" class="py-2 d-block">Beach</a></li>
 							<li><a href="#" class="py-2 d-block">Nature</a></li>
 							<li><a href="#" class="py-2 d-block">Camping</a></li>
@@ -824,6 +772,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" defer></script>
 	
 </body>
 </html>

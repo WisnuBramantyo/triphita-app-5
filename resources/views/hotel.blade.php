@@ -26,7 +26,7 @@
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
    <div class="container">
-     <a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and Tours</span></a>
+     <a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and More</span></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="oi oi-menu"></span> Menu
      </button>
@@ -34,8 +34,8 @@
      <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="destination" class="nav-link">Tour</a></li>
-         <li class="nav-item active"><a href="hotel" class="nav-link">Hotel</a></li>
+         <li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Stays</a></li>
+         <li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Experience</a></li>
          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
        </ul>
@@ -50,7 +50,7 @@
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
       <div class="col-md-9 ftco-animate pb-5 text-center">
        <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Tour List <i class="fa fa-chevron-right"></i></span></p>
-       <h1 class="mb-0 bread">Hotels List</h1>
+       <h1 class="mb-0 bread">Stays List</h1>
      </div>
    </div>
  </div>
@@ -149,7 +149,7 @@
    <div class="col-md-12 text-center">
     <div class="img"  style="background-image: url(images/bg_2.jpg);">
      <div class="overlay"></div>
-     <h2>We Are Triphita An Eco Stays and Tours</h2>
+     <h2>We Are Triphita An Eco Stays and More</h2>
      <p>We can manage your dream building A small river named Duden flows by their place</p>
      <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
    </div>
