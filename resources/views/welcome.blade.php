@@ -26,8 +26,6 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<style>
 		.project-destination .img:hover .hover-text {
 			display: block !important;
@@ -72,27 +70,24 @@
 		</div>
 	</nav>
 	<!-- END nav -->
-	
-	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+
+	<div class="hero-wrap">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-				<div class="col-md-7 ftco-animate">
-					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
-					<p class="caps">Travel to the corner of the world, sustainably</p>
-				</div>
+		  <div class="row justify-content-center align-items-center" style="height: 100%;">
+			<div class="col-md-10 text-center">
+			  <h1 class="mb-2">Discover Your Favorite Place with Us</h1>
+			  <p>Travel to the corner of the world, sustainably</p>
 			</div>
-		</div>
-	</div>
 
+		  </div>
+		</div>
+	  </div>
 	<section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="ftco-search">
-						<!-- Remove the existing tab structure and just keep the Lodgify search bar -->
-						
-
 						<style>
 							:root {
 							  --ldg-psb-background: #ffffff;
@@ -147,8 +142,6 @@
 							data-new-tab="false"
 							data-version="stable"
 						  ></div>
-
-
 						  
 						<script>
 							document.addEventListener('DOMContentLoaded', function() {
@@ -164,7 +157,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-section services-section">
+	<section class="story-section">
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -233,7 +226,7 @@
 						<div class="item">
 							<div class="project-destination">
 								<!-- Image with Hover Text -->
-								<a class="img" style="background-image: url('/images/sustainable-materials.webp');">
+								<a class="img" style="background-image: url('/images/clean-energy-and-transportation.jpg');">
 									<div class="text">
 										<!-- Title Always Visible -->
 										<h3>Clean Energy and Transportation</h3>
@@ -247,7 +240,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/energy-efficiency.webp');">
+								<a class="img" style="background-image: url('images/water-conservation-and-management.jpg');">
 									<div class="text">
 										<h3>Water Conservation and Management</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -259,7 +252,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/water-conservation.png');">
+								<a class="img" style="background-image: url('images/sustainable-food-systems.jpg');">
 									<div class="text">
 										<h3>Sustainable Food Systems</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -271,7 +264,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/waste-reduction.png');">
+								<a class="img" style="background-image: url('images/waste-reduction-and-recycling.jpg');">
 									<div class="text">
 										<h3>Waste Reduction and Recycling</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -283,7 +276,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
+								<a class="img" style="background-image: url('images/sustainable-materials-and-products.jpg');">
 									<div class="text">
 										<h3>Sustainable Materials and Products</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -295,7 +288,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
+								<a class="img" style="background-image: url('images/people-and-community-wellbeing.jpg');">
 									<div class="text">
 										<h3>People and Community Well-being</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -307,7 +300,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
+								<a class="img" style="background-image: url('images/cultural-preservation-and-enrichment.jpg');">
 									<div class="text">
 										<h3>Cultural Preservation and Enrichment</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -319,7 +312,7 @@
 						</div>
 						<div class="item">
 							<div class="project-destination">
-								<a class="img" style="background-image: url('images/local-sourcing.jpg');">
+								<a class="img" style="background-image: url('images/sustainable-governance-and-policies.jpg');">
 									<div class="text">
 										<h3>Sustainable Governance and Policies</h3>
 										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
@@ -449,12 +442,12 @@
 			</div>
 		</div>
 	</section>	
-	<section class="ftco-section ftco-about img"style="background-image: url(images/bg_4.jpg);">
+	<section class="ftco-section ftco-about img"style="background-image: url(images/kkc-welcome.jpg);">
 		<div class="overlay"></div>
 		<div class="container py-md-5">
 			<div class="row py-md-5">
 				<div class="col-md d-flex align-items-center justify-content-center">
-					<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+					<a href="https://www.youtube.com/watch?v=A5-jpCY-yvI" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
 						<span class="fa fa-play"></span>
 					</a>
 				</div>
@@ -495,12 +488,12 @@
 										<span class="fa fa-star"></span>
 										<span class="fa fa-star"></span>
 									</p>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Triphita made it so easy to find a beautiful, eco-friendly stay that aligned with my values.</p>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+										<div class="user-img" style="background-image: url(images/profile-photo-icon.png)"></div>
 										<div class="pl-3">
 											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<span class="position">Visitor</span>
 										</div>
 									</div>
 								</div>
@@ -516,12 +509,12 @@
 										<span class="fa fa-star"></span>
 										<span class="fa fa-star"></span>
 									</p>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Every part of the trip felt intentional and meaningful — it’s travel with heart.</p>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+										<div class="user-img" style="background-image: url(images/profile-photo-icon.png)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Dimas R.</p>
+											<span class="position">Visitor</span>
 										</div>
 									</div>
 								</div>
@@ -537,54 +530,12 @@
 										<span class="fa fa-star"></span>
 										<span class="fa fa-star"></span>
 									</p>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="mb-4">Thanks to Triphita, I discovered hidden gems and stayed in places that truly care about sustainability.</p>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+										<div class="user-img" style="background-image: url(images/profile-photo-icon.png)"></div>
 										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<p class="star">
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</p>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<p class="star">
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</p>
-									<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Roger Scott</p>
-											<span class="position">Marketing Manager</span>
+											<p class="name">Lana T.</p>
+											<span class="position">Visitor</span>
 										</div>
 									</div>
 								</div>
@@ -687,69 +638,50 @@
 
 	<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
 		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md pt-5">
-					<div class="ftco-footer-widget pt-md-5 mb-4">
-						<h2 class="ftco-heading-2">About</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md pt-5 border-left">
-					<div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-						<h2 class="ftco-heading-2">Information</h2>
-						<ul class="list-unstyled">
-							<li><a href="about.html" class="py-2 d-block">About Us</a></li>
-							<li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-							<li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-							<li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-							<li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-							<li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-							<li><a href="#" class="py-2 d-block">Call Us</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md pt-5 border-left">
-					<div class="ftco-footer-widget pt-md-5 mb-4">
-						<h2 class="ftco-heading-2">Experience</h2>
-						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Adventure</a></li>
-							<li><a href="#" class="py-2 d-block">Accommodation and Restaurant</a></li>
-							<li><a href="#" class="py-2 d-block">Beach</a></li>
-							<li><a href="#" class="py-2 d-block">Nature</a></li>
-							<li><a href="#" class="py-2 d-block">Camping</a></li>
-							<li><a href="#" class="py-2 d-block">Party</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md pt-5 border-left">
-					<div class="ftco-footer-widget pt-md-5 mb-4">
-						<h2 class="ftco-heading-2">Have a Questions?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-								<li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+		  <div class="row mb-5">
+			<div class="col-md pt-5">
+			  <div class="ftco-footer-widget pt-md-5 mb-4">
+				<h2 class="ftco-heading-2">About</h2>
+				<p>At Triphita, we curate eco-conscious stays and local experiences that celebrate Indonesia’s natural and cultural heritage. Through responsible travel, we strive to protect the planet and uplift communities.</p>
+				<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+				  <li class="ftco-animate"><a href="https://www.instagram.com/my.triphita/" target="_blank" rel="noopener noreferrer"><span class="fa fa-instagram"></span></a></li>
+				  <li class="ftco-animate"><a href="https://www.linkedin.com/company/triphita" target="_blank" rel="noopener noreferrer"><span class="fa fa-linkedin"></span></a></li>
+				</ul>
+			  </div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-
-					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					</div>
-				</div>
+			<div class="col-md pt-5 border-left">
+			  <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+				<h2 class="ftco-heading-2">Information</h2>
+				<ul class="list-unstyled">
+				  <li><a href="about.html" class="py-2 d-block">About Us</a></li>
+				  <li><a href="#" class="py-2 d-block">Privacy and policy</a></li>
+				  <li><a href="#" class="py-2 d-block">Booking Condition</a></li>
+				  <li><a href="#" class="py-2 d-block">General Inquiries</a></li>
+				</ul>
+			  </div>
 			</div>
+			<div class="col-md pt-5 border-left">
+			 <div class="ftco-footer-widget pt-md-5 mb-4">
+			  <h2 class="ftco-heading-2">Have a Questions?</h2>
+			  <div class="block-23 mb-3">
+				<ul>
+				  <li><span class="icon fa fa-map-marker"></span><span class="text">Denpasar Selatan, Denpasar, Bali, Indonesia</span></li>
+				  <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">Contact@triphita.com</span></a></li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+	   </div>
+	   <div class="row">
+		<div class="col-md-12 text-center">
+	  
+		  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+		  </div>
 		</div>
-	</footer>
+	  </div>
+	  </footer>
 	
 	
 
