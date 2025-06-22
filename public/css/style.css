@@ -8624,7 +8624,6 @@ h1, h2, h3, h4, h5,
       width: 100%;
       height: 400px; /* Default height for desktop */
       position: relative;
-      background-image: url('/images/bg_5.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

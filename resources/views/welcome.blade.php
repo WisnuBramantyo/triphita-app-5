@@ -62,7 +62,7 @@
 					<!-- Active state for current page -->
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Stays</a></li>
-					<li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Experience</a></li>
+					<li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 				</ul>
@@ -71,12 +71,12 @@
 	</nav>
 	<!-- END nav -->
 
-	<div class="hero-wrap">
+	<div class="hero-wrap" style="background-image: url('images/bg_5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
 		  <div class="row justify-content-center align-items-center" style="height: 100%;">
 			<div class="col-md-10 text-center">
-			  <h1 class="mb-2">Discover Your Favorite Place with Us</h1>
+			  <h1>Discover Your Favorite Place with Us</h1>
 			  <p>Travel to the corner of the world, sustainably</p>
 			</div>
 
@@ -171,7 +171,7 @@
 						<p>But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
 						<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. </p>
 						<p>Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
-						<p style="text-align: center;"><a href="#search-section" class="btn btn-primary py-3 px-4">Search Accommodation</a></p>
+						<p style="text-align: center;"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="btn btn-primary py-3 px-4">Search Stays</a></p>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -333,7 +333,7 @@
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="subheading">Destination</span>
-					<h2 class="mb-4">Featured Experience</h2>
+					{{-- <h2 class="mb-4">Featured Stays</h2> --}}
 				</div>
 			</div>
 			<div class="row">

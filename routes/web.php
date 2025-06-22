@@ -31,7 +31,11 @@ Route::get('/', function () {
 });
 
 Route::get('/search', [DestinationController::class, 'search'])->name('search');
-Route::get('/destination', [DestinationController::class, 'search'])->name('destination.search');
+// Route::get('/destination', [DestinationController::class, 'search'])
+// ->name('destination.search');
+Route::get('/destination', function () {
+    return view('coming-soon');
+})->name('destination.search');
 Route::get('/hotel', [HotelController::class, 'search'])->name('hotel.search');
 
 Route::resource('tours', TourController::class);
