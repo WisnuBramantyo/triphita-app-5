@@ -71,7 +71,7 @@
 	</nav>
 	<!-- END nav -->
 
-	<div class="hero-wrap" style="background-image: url('images/bg_5.jpg');">
+	<div class="hero-wrap" style="background-image: url('images/kkc-vibe-top.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
 		  <div class="row justify-content-center align-items-center" style="height: 100%;">
