@@ -8599,8 +8599,7 @@ h1, h2, h3, h4, h5,
       color: #000000;
       padding-top: 1rem;
       padding-bottom: 1rem; }
-
-
+      
 #search-section {
   margin-top: 0px; /* or more depending on navbar height */
   position: relative;
@@ -8680,7 +8679,9 @@ h1, h2, h3, h4, h5,
       }
     }
     
-
+    .hero-title {
+      color: white;
+    }
 
 /* End of Hero Section */
 
