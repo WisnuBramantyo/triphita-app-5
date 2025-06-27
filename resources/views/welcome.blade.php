@@ -161,7 +161,7 @@
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita</h2>
+					<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita Beta</h2>
 				</div>
 			</div>
 			<div class="row d-flex">
