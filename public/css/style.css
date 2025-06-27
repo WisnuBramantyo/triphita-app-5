@@ -8608,6 +8608,7 @@ h1, h2, h3, h4, h5,
 }
 
 .navbar-brand {
+  color: #fff;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2; }
@@ -8671,6 +8672,7 @@ h1, h2, h3, h4, h5,
       .hero-wrap h1 {
         font-size: 1.75rem; /* Adjust font sizes */
         margin-bottom: 0.5rem;
+        color: #fff;
       }
     
       .hero-wrap p {
