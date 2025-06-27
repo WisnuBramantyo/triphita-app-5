@@ -59,19 +59,19 @@
 		$('.carousel-destination').owlCarousel({
 			center: false,
 			loop: true,
-			items: 4,
+			items:1,
 			margin: 30,
 			stagePadding: 0,
-			nav: true,
+			nav: false,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive: {
-				0: {
+			responsive:{
+				0:{
 					items: 1
 				},
-				600: {
+				600:{
 					items: 2
 				},
-				1000: {
+				1000:{
 					items: 4
 				}
 			}
@@ -261,26 +261,13 @@
   });
 
 
-  $('.checkin_date, .checkout_date, .date').datepicker({
+  $('.checkin_date, .checkout_date').datepicker({
 	  'format': 'm/d/yyyy',
 	  'autoclose': true
 	});
 
-	// Smooth scroll for anchor links with offset
-	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
-			const element = document.querySelector(this.getAttribute('href'));
-			const headerOffset = 500; // Increased offset to account for the full header height and spacing
-			const elementPosition = element.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: 'smooth'
-			});
-		});
-	});
+
 
 })(jQuery);
 
