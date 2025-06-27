@@ -8677,11 +8677,12 @@ h1, h2, h3, h4, h5,
       .hero-wrap p {
         font-size: 1rem;
       }
+          
+    .hero-wrap-title {
+      color: rgb(255, 255, 255);
     }
-    
-    .hero-wrap-title{
-      color: #fff;
-    }
+  }
+
 
 /* End of Hero Section */
 
