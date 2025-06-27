@@ -76,7 +76,7 @@
 		<div class="container">
 		  <div class="row justify-content-center align-items-center" style="height: 100%;">
 			<div class="col-md-10 text-center">
-			  <h1 class="h1 hero-title">Discover Your Favorite Place with Us</h1>
+			  <h2 class="hero-wrap-title">Discover Your Favorite Place with Us</h2>
 			  <p>Travel to the corner of the world, sustainably</p>
 			</div>
 
