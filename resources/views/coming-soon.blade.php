@@ -16,7 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(161, 154, 154, 0.5)), url('images/kkc-vibe-top.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(161, 154, 154, 0.5)), url('images/kkc-vibe-top-min.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
