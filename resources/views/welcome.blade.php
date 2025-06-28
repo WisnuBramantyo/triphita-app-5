@@ -333,7 +333,7 @@
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="subheading">Destination</span>
-					{{-- <h2 class="mb-4">Featured Stays</h2> --}}
+					<h2 class="mb-4">Featured Stays</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -629,7 +629,7 @@
 						<div class="overlay"></div>
 						<h2>We Are Triphita An Eco Stays and More </h2>
 						<p>We will make your days unforgettable and truly sustainable</p>
-						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Book Now</a></p>
+						<p class="mb-0"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="btn btn-primary px-4 py-3">Book Now</a></p>
 					</div>
 				</div>
 			</div>
