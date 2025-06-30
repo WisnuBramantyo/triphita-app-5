@@ -61,7 +61,7 @@
 				<ul class="navbar-nav ml-auto">
 					<!-- Active state for current page -->
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="nav-link">Stays</a></li>
+					<li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
 					<li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -116,7 +116,7 @@
 							id="lodgify-search-bar"
 							data-website-id="558326"
 							data-language-code="en"
-							data-search-page-url='https://wisnu-bramantyo.lodgify.com/en/all-properties'
+							data-search-page-url='https://booking.triphita.com/en/all-properties'
 							
 							data-dates-check-in-label='Check-in'
 							data-dates-check-out-label='Check-out'
@@ -171,7 +171,7 @@
 						<p>But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
 						<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. </p>
 						<p>Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
-						<p style="text-align: center;"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="btn btn-primary py-3 px-4">Search Stays</a></p>
+						<p style="text-align: center;"><a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary py-3 px-4">Search Stays</a></p>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -340,13 +340,13 @@
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
 						<!-- Property Image with Price Tag -->
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-fire.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-fire.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<!-- Property Details -->
 						<div class="text p-4">
 							<!-- Property Name -->
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<!-- Location with Icon -->
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<!-- Amenity Icons -->
@@ -360,11 +360,11 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sunrise.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-sunrise.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -376,11 +376,11 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sunset.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-sunset.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -393,11 +393,11 @@
 
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-welcome.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-welcome.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -409,11 +409,11 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-jeep-tour.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-jeep-tour.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -425,11 +425,11 @@
 				</div>
 				<div class="col-md-4 ftco-animate">
 					<div class="project-wrap">
-						<a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp" class="img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
+						<a href="https://booking.triphita.com/en/kampung-kopi-camp1" class="img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
 							<span class="price">$550/person</span>
 						</a>
 						<div class="text p-4">
-							<h3><a href="https://wisnu-bramantyo.lodgify.com/en/kampung-kopi-camp">Kampung Kopi Camp</a></h3>
+							<h3><a href="https://booking.triphita.com/en/kampung-kopi-camp1">Kampung Kopi Camp</a></h3>
 							<p class="location"><span class="fa fa-map-marker"></span> Pupuan, Tabanan, Bali</p>
 							<ul>
 								<li><span class="flaticon-shower"></span>2</li>
@@ -629,7 +629,7 @@
 						<div class="overlay"></div>
 						<h2>We Are Triphita An Eco Stays and More </h2>
 						<p>We will make your days unforgettable and truly sustainable</p>
-						<p class="mb-0"><a href="https://wisnu-bramantyo.lodgify.com/en/all-properties" class="btn btn-primary px-4 py-3">Book Now</a></p>
+						<p class="mb-0"><a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary px-4 py-3">Book Now</a></p>
 					</div>
 				</div>
 			</div>
