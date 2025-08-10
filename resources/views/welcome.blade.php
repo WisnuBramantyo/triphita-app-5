@@ -209,7 +209,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
+	<section class="ftco-section img ftco-select-destination">
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
@@ -675,9 +675,7 @@
 	   <div class="row">
 		<div class="col-md-12 text-center">
 	  
-		  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+		              <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
 		  </div>
 		</div>
 	  </div>
