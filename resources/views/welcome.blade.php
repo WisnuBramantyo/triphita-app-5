@@ -47,7 +47,7 @@
 </head>
 <body>
 	<!-- Navigation Menu -->
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-sticky" id="ftco-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top" id="ftco-navbar">
 		<!-- Brand Logo and Name -->
 		<div class="container">
 			<a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and More</span></a>
