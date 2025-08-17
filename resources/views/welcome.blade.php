@@ -42,12 +42,45 @@
 			border-radius: 5px;
 			margin-top: 5px;
 		}
+		
+		/* Responsive Navigation Arrows */
+		.carousel-nav-left,
+		.carousel-nav-right {
+			display: none; /* Hidden by default on mobile */
+		}
+		
+		/* Show arrows on medium screens and larger */
+		@media (min-width: 768px) {
+			.carousel-nav-left,
+			.carousel-nav-right {
+				display: block;
+			}
+		}
+		
+		/* Adjust positioning for different screen sizes */
+		@media (min-width: 768px) and (max-width: 991px) {
+			.carousel-nav-left {
+				left: -50px;
+			}
+			.carousel-nav-right {
+				right: -50px;
+			}
+		}
+		
+		@media (min-width: 992px) {
+			.carousel-nav-left {
+				left: -60px;
+			}
+			.carousel-nav-right {
+				right: -60px;
+			}
+		}
 	</style>
 
 </head>
 <body>
 	<!-- Navigation Menu -->
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light position-fixed" id="ftco-navbar">
+	<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light position-fixed" id="ftco-navbar">
 		<!-- Brand Logo and Name -->
 		<div class="container">
 			<a class="navbar-brand" href="/">Triphita Beta<span>Eco Stays and More</span></a>
@@ -71,7 +104,7 @@
 	</nav>
 	<!-- END nav -->
 
-	<div class="hero-wrap" style="background-image: url('images/kkc-vibe-top.jpg');">
+	<div class="hero-wrap" style="background-image: url('images/kkc-vibe-top.jpg'); padding-top: 100px; margin-top: 50px;">
 		{{-- <div class="overlay"></div> --}}
 		<div class="container">
 		  <div class="row justify-content-center align-items-center" style="height: 100%;">
@@ -83,28 +116,28 @@
 		  </div>
 		</div>
 	  </div>
-	<section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section">
+	<section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section" style="margin-top: 50px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="ftco-search">
 						<style>
 							:root {
-							  --ldg-psb-background: #ffffff;
-							  --ldg-psb-border-radius: 0.42em;
-							  --ldg-psb-box-shadow: 0px 24px 54px 0px rgba(0, 0, 0, 0.1);
-							  --ldg-psb-padding: 14px;
-							  --ldg-psb-input-background: #ffffff;
-							  --ldg-psb-button-border-radius: 3.58em;
-							  --ldg-psb-color-primary: #037d5d;
-							  --ldg-psb-color-primary-lighter:#81beae;
-							  --ldg-psb-color-primary-darker: #023f2f;
-							  --ldg-psb-color-primary-contrast: #ffffff;
-							  --ldg-semantic-color-primary:  #037d5d;
-							  --ldg-semantic-color-primary-lighter: #81beae;
-							  --ldg-semantic-color-primary-darker: #023f2f;
-							  --ldg-semantic-color-primary-contrast: #ffffff;
-							  --ldg-component-modal-z-index: 999;
+								--ldg-psb-background: #ffffff;
+								--ldg-psb-border-radius: 0.42em;
+								--ldg-psb-box-shadow: 0px 24px 54px 0px rgba(0, 0, 0, 0.1);
+								--ldg-psb-padding: 14px;
+								--ldg-psb-input-background: #ffffff;
+								--ldg-psb-button-border-radius: 3.58em;
+								--ldg-psb-color-primary: #037d5d;
+								--ldg-psb-color-primary-lighter:#81beae;
+								--ldg-psb-color-primary-darker: #023f2f;
+								--ldg-psb-color-primary-contrast: #ffffff;
+								--ldg-semantic-color-primary:  #037d5d;
+								--ldg-semantic-color-primary-lighter: #81beae;
+								--ldg-semantic-color-primary-darker: #023f2f;
+								--ldg-semantic-color-primary-contrast: #ffffff;
+								--ldg-component-modal-z-index: 999;
 							}
 							#lodgify-search-bar {
 							  position: relative;
@@ -141,16 +174,17 @@
 							
 							data-new-tab="false"
 							data-version="stable"
+							data-has-guests-breakdown
 						  ></div>
 						  
-						<script>
+						<!-- <script>
 							document.addEventListener('DOMContentLoaded', function() {
 								// Force re-initialization of Lodgify search bar
 								if (window.LodgifySearchBar) {
 									window.LodgifySearchBar.init();
 								}
 							});
-						</script>
+						</script> -->
 					</div>
 				</div>
 			</div>
@@ -221,7 +255,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="carousel-destination owl-carousel ftco-animate">
+					<div class="position-relative">
+						<!-- Navigation Arrows - Left Side -->
+						<div class="carousel-nav-left" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); z-index: 10;">
+							<button class="btn btn-outline-primary" id="prev-sustainability" style="border-radius: 50%; width: 50px; height: 50px; padding: 0; display: block;">
+								<i class="fa fa-chevron-left"></i>
+							</button>
+						</div>
+						<!-- Navigation Arrows - Right Side -->
+						<div class="carousel-nav-right" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); z-index: 10;">
+							<button class="btn btn-outline-primary" id="next-sustainability" style="border-radius: 50%; width: 50px; height: 50px; padding: 0; display: block;">
+								<i class="fa fa-chevron-right"></i>
+							</button>
+						</div>
+						<div class="carousel-destination owl-carousel ftco-animate" id="sustainability-carousel">
 						<!-- Individual Carousel Items with Hover Effect -->
 						<div class="item">
 							<div class="project-destination">
@@ -703,6 +750,31 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" defer></script>
+	
+	<!-- Sustainability Carousel Navigation Script -->
+	<script>
+		$(document).ready(function() {
+			// Wait for the carousel to be fully initialized
+			setTimeout(function() {
+				const prevBtn = document.getElementById('prev-sustainability');
+				const nextBtn = document.getElementById('next-sustainability');
+				
+				if (prevBtn && nextBtn) {
+					// Previous button functionality
+					prevBtn.addEventListener('click', function() {
+						$('.carousel-destination').trigger('prev.owl.carousel');
+					});
+					
+					// Next button functionality
+					nextBtn.addEventListener('click', function() {
+						$('.carousel-destination').trigger('next.owl.carousel');
+					});
+					
+					console.log('Navigation arrows initialized successfully');
+				}
+			}, 1000);
+		});
+	</script>
 	
 </body>
 </html>

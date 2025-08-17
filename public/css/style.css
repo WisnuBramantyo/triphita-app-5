@@ -10193,3 +10193,17 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+    
+    /* Arrow button styling with Triphita brand color */
+    .carousel-nav-left .btn,
+    .carousel-nav-right .btn {
+        border-color: #037d5d !important;
+        color: #037d5d !important;
+    }
+
+    .carousel-nav-left .btn:hover,
+    .carousel-nav-right .btn:hover {
+        background-color: #037d5d !important;
+        border-color: #037d5d !important;
+        color: white !important;
+    }
