@@ -36,7 +36,7 @@
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>         
          <li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
          <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
-         <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+         <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
      </ul>
  </div>

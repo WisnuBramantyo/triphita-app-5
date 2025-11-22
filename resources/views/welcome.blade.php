@@ -42,6 +42,55 @@
 			border-radius: 5px;
 			margin-top: 5px;
 		}
+
+		/* Services section - consistent image sizing */
+		.story-section .services.img {
+			height: 400px;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.story-section .services .media-body {
+			background: transparent;
+			padding: 20px;
+			border-radius: 0 0 8px 8px;
+		}
+		.story-section .services .media-body h3,
+		.story-section .services .media-body p {
+			color: #fff;
+		}
+		/* Mobile responsive adjustments */
+		@media (max-width: 767px) {
+			.story-section .services.img {
+				height: 300px;
+			}
+			.story-section .services .media-body {
+				padding: 15px;
+			}
+		}
+
+		/* Enhanced Stay Button */
+		.story-section .btn-primary {
+			background: linear-gradient(135deg, #037d5d 0%, #023f2f 100%);
+			border: 2px solid #037d5d;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 1.1rem;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			box-shadow: 0 4px 15px rgba(3, 125, 93, 0.3);
+			transition: all 0.3s ease;
+			padding: 12px 40px !important;
+			position: relative;
+			overflow: hidden;
+		}
+		.story-section .btn-primary span,
+		.story-section .btn-primary {
+			position: relative;
+			z-index: 1;
+		}
 		
 		/* Responsive Navigation Arrows */
 		.carousel-nav-left,
@@ -75,6 +124,161 @@
 				right: -60px;
 			}
 		}
+
+		/* Pure CSS slider (radio-based) */
+		.sustainability-slider {
+			position: relative;
+			min-height: 400px;
+		}
+		.sustainability-slider .slides {
+			display: grid;
+			grid-template-columns: 100%;
+			position: relative;
+			min-height: 400px;
+		}
+		.sustainability-slider input[type="radio"] {
+			display: none;
+		}
+		.sustainability-slide {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			transform: scale(0.98);
+			transition: opacity 300ms ease, transform 300ms ease;
+			width: 100%;
+		}
+		.sustainability-slide .img {
+			display: block;
+			width: 100%;
+			height: 400px;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			border-radius: 8px;
+		}
+		.sustainability-slide .text {
+			position: absolute;
+			bottom: 16px;
+			left: 16px;
+			right: auto;
+			background: rgba(0,0,0,0.6);
+			padding: 10px 14px;
+			border-radius: 6px;
+		}
+		.sustainability-slide .text h3 {
+			color: #fff;
+			margin: 0;
+			font-size: 1.1rem;
+			text-align: left;
+		}
+		/* Default show first slide */
+		#sustainability-1:checked ~ .slides .slide-1,
+		#sustainability-2:checked ~ .slides .slide-2,
+		#sustainability-3:checked ~ .slides .slide-3,
+		#sustainability-4:checked ~ .slides .slide-4,
+		#sustainability-5:checked ~ .slides .slide-5 { opacity: 1; transform: scale(1); position: relative; }
+
+		/* Arrow Navigation */
+		.sustainability-arrows label {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 10;
+			background: rgba(255, 255, 255, 0.9);
+			border: none;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background 200ms ease, transform 200ms ease;
+			font-size: 20px;
+			color: #037d5d;
+			margin: 0;
+		}
+		.sustainability-arrows label:hover {
+			background: #037d5d;
+			color: #fff;
+			transform: translateY(-50%) scale(1.1);
+		}
+		.sustainability-arrow-left label {
+			left: 20px;
+		}
+		.sustainability-arrow-right label {
+			right: 20px;
+		}
+		/* Hide all arrow labels by default */
+		.sustainability-arrows label {
+			display: none;
+		}
+		/* Show appropriate left arrow based on current slide (infinite loop) */
+		#sustainability-1:checked ~ .sustainability-arrow-left .arrow-left-1,
+		#sustainability-2:checked ~ .sustainability-arrow-left .arrow-left-2,
+		#sustainability-3:checked ~ .sustainability-arrow-left .arrow-left-3,
+		#sustainability-4:checked ~ .sustainability-arrow-left .arrow-left-4,
+		#sustainability-5:checked ~ .sustainability-arrow-left .arrow-left-5 { display: flex; }
+		/* Show appropriate right arrow based on current slide (infinite loop) */
+		#sustainability-1:checked ~ .sustainability-arrow-right .arrow-right-1,
+		#sustainability-2:checked ~ .sustainability-arrow-right .arrow-right-2,
+		#sustainability-3:checked ~ .sustainability-arrow-right .arrow-right-3,
+		#sustainability-4:checked ~ .sustainability-arrow-right .arrow-right-4,
+		#sustainability-5:checked ~ .sustainability-arrow-right .arrow-right-5 { display: flex; }
+
+		/* Dots */
+		.sustainability-dots {
+			display: flex;
+			gap: 8px;
+			justify-content: center;
+			margin-top: 16px;
+			position: relative;
+			z-index: 5;
+		}
+		.sustainability-dots label {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #d0d0d0;
+			cursor: pointer;
+			transition: background 200ms ease, transform 200ms ease;
+		}
+		#sustainability-1:checked ~ .sustainability-dots label[for="sustainability-1"],
+		#sustainability-2:checked ~ .sustainability-dots label[for="sustainability-2"],
+		#sustainability-3:checked ~ .sustainability-dots label[for="sustainability-3"],
+		#sustainability-4:checked ~ .sustainability-dots label[for="sustainability-4"],
+		#sustainability-5:checked ~ .sustainability-dots label[for="sustainability-5"] { background: #037d5d; transform: scale(1.1); }
+
+		/* Mobile adjustments to prevent arrow and text overlap */
+		@media (max-width: 767px) {
+			.sustainability-arrow-left label {
+				left: 10px;
+				width: 40px;
+				height: 40px;
+				font-size: 16px;
+			}
+			.sustainability-arrow-right label {
+				right: 10px;
+				width: 40px;
+				height: 40px;
+				font-size: 16px;
+			}
+			.sustainability-slide .text {
+				bottom: 10px;
+				left: 10px;
+				right: 60px; /* Leave space for right arrow */
+				padding: 8px 12px;
+				max-width: calc(100% - 70px); /* Prevent text from going under arrow */
+			}
+			.sustainability-slide .text h3 {
+				font-size: 1rem;
+			}
+			.sustainability-slide .text p {
+				font-size: 0.85rem;
+			}
+		}
 	</style>
 
 </head>
@@ -96,7 +300,7 @@
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
 					<li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 				</ul>
 			</div>
@@ -196,48 +400,46 @@
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita Beta</h2>
+					<div class="w-100" style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto;">
+						<p>Our story begins in Bali, once a paradise of vibrant culture, untouched nature, and heartfelt traditions.</p>
+						<p>But overtourism has left its mark: crowded roads, concrete sprawl, and fading beauty.</p>
+						<p>At Triphita, we believe it's not too late. By reimagining how people travel and stay, we're restoring balance, supporting local hosts, protecting nature, and celebrating Bali's soul.</p>
+						<p>Join us in shaping a new era of conscious travel that preserves the paradise we all fell in love with.</p>
+					</div>
 				</div>
 			</div>
 			<div class="row d-flex">
-				<div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-					<div class="w-100" style="text-align: justify; font-size: 1.1em;">
-						<p>Our story begins on the paradise island of Bali, a land once celebrated for its rich culture, untouched nature, and vibrant traditions. From its breathtaking beaches to its mesmerizing dances, intricate crafts, and the warm smiles of its people, Bali was a true haven for the soul. </p>
-						<p>But time has taken its toll. Overtourism has stripped away much of this romance. What was once a lush paradise is now dotted with concrete jungles, plagued by traffic jams, and burdened by mounting waste. The beauty that enchanted the world is fading, and the magic of Bali risks becoming a memory.</p>
-						<p>At Triphita, we believe it's not too late. We see an opportunity to reclaim the paradise that once was, step by step. Our vision begins with revolutionizing the way people travel and stay. By embracing sustainability, we're paving the way for a new era of conscious tourism that honors the land, respects its people, and protects its future. </p>
-						<p>Join us in our mission to restore Bali to its natural glory. Together, we can rewrite the story of this beloved island—creating a blueprint for sustainable tourism that, one day, can inspire and spread to the rest of the world..</p>
-						<p style="text-align: center;"><a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary py-3 px-4">Search Stays</a></p>
-					</div>
+				<!-- Services Section - Displays Sustainable Accommodation and Tours side by side -->
+				<div class="col-md-6 mb-4">
+					<div class="services services-1 color-1 d-block img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-paragliding"></span>
+						</div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Sustainable Accommodation (Beta)</h3>
+							<p>Experience hotel comfort, local warmth, and real impact.</p>
+							<p>Every Triphita micro stay blends convenience with conscience, small-scale, community-owned, and built on simple, visible sustainability.</p>
+						</div>
+					</div>      
 				</div>
-				<div class="col-md-6">
-					<!-- Services Section - Displays Sustainable Accommodation and Tours -->
-					<div class="row flex-column">
-						<div class="col-md-12 mb-4">
-							<div class="services services-1 color-1 d-block img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center">
-									<span class="flaticon-paragliding"></span>
-								</div>
-								<div class="media-body">
-									<h3 class="heading mb-3">Sustainable Accommodation (Beta)</h3>
-									<p>Stays in our curated eco-friendly accommodation, designed to blend comfort, sustainability, and local culture seamlessly.</p>
-									<p>Each property adheres to our 8 sustainability criteria, ensuring your visit leaves a positive impact on the environment and community</p>
-								</div>
-							</div>      
-						</div>
 
-						<!-- Sustainable Tours Box -->
-						<div class="col-md-12">
-							<div class="services services-1 color-2 d-block img" style="background-image: url(images/kkc-jeep-tour.jpg);">
-								<div class="icon d-flex align-items-center justify-content-center">
-									<span class="flaticon-route"></span>
-								</div>
-								<div class="media-body">
-									<h3 class="heading mb-3">Sustainable Experience (Coming Soon)</h3>
-									<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
-									<p>Designed to protect the environment and celebrate traditions, our tours ensure unforgettable experiences that leave a positive impact on the places you visit</p>
-								</div>
-							</div>    
+				<!-- Sustainable Tours Box -->
+				<div class="col-md-6 mb-4">
+					<div class="services services-1 color-2 d-block img" style="background-image: url(images/kkc-jeep-tour.jpg);">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-route"></span>
 						</div>
-					</div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Sustainable Experience (Coming Soon)</h3>
+							<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
+							<p>Designed to protect the environment and celebrate traditions, our tours ensure unforgettable experiences that leave a positive impact on the places you visit</p>
+						</div>
+					</div>    
+				</div>
+			</div>
+			<div class="row justify-content-center mt-4">
+				<div class="col-md-12 text-center">
+					<a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary py-3 px-4">Stay</a>
 				</div>
 			</div>
 		</div>
@@ -247,127 +449,98 @@
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Our Sustainability Criteria</span>
-					<h2 class="mb-4">Accommodation</h2>
+					<!-- <span class="subheading">Why Triphita</span> -->
+					<h2 class="mb-4">Why Triphita</h2>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="position-relative">
-						<!-- Navigation Arrows - Left Side -->
-						<div class="carousel-nav-left" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); z-index: 10;">
-							<button class="btn btn-outline-primary" id="prev-sustainability" style="border-radius: 50%; width: 50px; height: 50px; padding: 0; display: block;">
-								<i class="fa fa-chevron-left"></i>
-							</button>
+					<div class="sustainability-slider ftco-animate" id="sustainability-carousel">
+						<input type="radio" name="sustainability" id="sustainability-1" checked>
+						<input type="radio" name="sustainability" id="sustainability-2">
+						<input type="radio" name="sustainability" id="sustainability-3">
+						<input type="radio" name="sustainability" id="sustainability-4">
+						<input type="radio" name="sustainability" id="sustainability-5">
+
+						<!-- Left Arrow Navigation (goes to previous slide - infinite loop) -->
+						<div class="sustainability-arrows sustainability-arrow-left">
+							<label for="sustainability-5" class="arrow-left-1"><i class="fa fa-chevron-left"></i></label>
+							<label for="sustainability-1" class="arrow-left-2"><i class="fa fa-chevron-left"></i></label>
+							<label for="sustainability-2" class="arrow-left-3"><i class="fa fa-chevron-left"></i></label>
+							<label for="sustainability-3" class="arrow-left-4"><i class="fa fa-chevron-left"></i></label>
+							<label for="sustainability-4" class="arrow-left-5"><i class="fa fa-chevron-left"></i></label>
 						</div>
-						<!-- Navigation Arrows - Right Side -->
-						<div class="carousel-nav-right" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); z-index: 10;">
-							<button class="btn btn-outline-primary" id="next-sustainability" style="border-radius: 50%; width: 50px; height: 50px; padding: 0; display: block;">
-								<i class="fa fa-chevron-right"></i>
-							</button>
+
+						<!-- Right Arrow Navigation (goes to next slide - infinite loop) -->
+						<div class="sustainability-arrows sustainability-arrow-right">
+							<label for="sustainability-2" class="arrow-right-1"><i class="fa fa-chevron-right"></i></label>
+							<label for="sustainability-3" class="arrow-right-2"><i class="fa fa-chevron-right"></i></label>
+							<label for="sustainability-4" class="arrow-right-3"><i class="fa fa-chevron-right"></i></label>
+							<label for="sustainability-5" class="arrow-right-4"><i class="fa fa-chevron-right"></i></label>
+							<label for="sustainability-1" class="arrow-right-5"><i class="fa fa-chevron-right"></i></label>
 						</div>
-						<div class="carousel-destination owl-carousel ftco-animate" id="sustainability-carousel">
-						<!-- Individual Carousel Items with Hover Effect -->
-						<div class="item">
-							<div class="project-destination">
-								<!-- Image with Hover Text -->
-								<a class="img" style="background-image: url('/images/clean-energy-and-transportation.jpg');">
+
+						<div class="slides">
+							<div class="sustainability-slide slide-1">
+								<div class="img" style="background-image: url('/images/clean-energy-and-transportation.jpg');">
 									<div class="text">
-										<!-- Title Always Visible -->
-										<h3>Clean Energy and Transportation</h3>
-										<!-- Description Shows on Hover -->
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Focus on sustainable energy sources and eco-friendly transport solutions.</span>
-										</div>
+										<h3>Locally Owned, Human Connection</h3>
+										<p style="margin-top: 6px; font-size: 0.95rem; color: #ffffffcc;">
+											Every stay is owned by local hosts, bringing authentic stories, culture, and community warmth to your journey.
+										</p>
 									</div>
-								</a>
+								</div>
+							</div>
+							<div class="sustainability-slide slide-2">
+								<div class="img" style="background-image: url('images/water-conservation-and-management.jpg');">
+									<div class="text">
+										<h3>Visible Sustainability, Real Impact</h3>
+										<p style="margin-top: 6px; font-size: 0.95rem; color: #ffffffcc;">
+											From solar water heating to plastic-free amenities, our properties practice sustainability you can see and feel — not just talk about.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="sustainability-slide slide-3">
+								<div class="img" style="background-image: url('images/sustainable-food-systems.jpg');">
+									<div class="text">
+										<h3>Micro-Scale Comfort</h3>
+										<p style="margin-top: 6px; font-size: 0.95rem; color: #ffffffcc;">
+										Ten rooms or fewer means peaceful stays, personal attention, and low-impact travel without sacrificing comfort.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="sustainability-slide slide-4">
+								<div class="img" style="background-image: url('images/waste-reduction-and-recycling.jpg');">
+									<div class="text">
+										<h3>Transparent & Hassle-Free</h3>
+										<p style="margin-top: 6px; font-size: 0.95rem; color: #ffffffcc;">
+										charges, no surprises — just straightforward, stress-free bookings.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="sustainability-slide slide-5">
+								<div class="img" style="background-image: url('images/sustainable-materials-and-products.jpg');">
+									<div class="text">
+										<h3>Travel That Gives Back</h3>
+										<p style="margin-top: 6px; font-size: 0.95rem; color: #ffffffcc;">
+										Your stay directly supports local livelihoods and helps protect Indonesia’s natural and cultural heritage.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/water-conservation-and-management.jpg');">
-									<div class="text">
-										<h3>Water Conservation and Management</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Emphasize efficient use and preservation of water resources.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-food-systems.jpg');">
-									<div class="text">
-										<h3>Sustainable Food Systems</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Promote locally sourced, eco-friendly, and ethical food practices.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/waste-reduction-and-recycling.jpg');">
-									<div class="text">
-										<h3>Waste Reduction and Recycling</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Commit to minimizing waste and implementing effective recycling programs.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-materials-and-products.jpg');">
-									<div class="text">
-										<h3>Sustainable Materials and Products</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Encourage the use of eco-friendly building materials and non-toxic products, such as cleaning supplies.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/people-and-community-wellbeing.jpg');">
-									<div class="text">
-										<h3>People and Community Well-being</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Support local communities, fair practices, and employee welfare.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/cultural-preservation-and-enrichment.jpg');">
-									<div class="text">
-										<h3>Cultural Preservation and Enrichment</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Uphold and celebrate local traditions, arts, and heritage.</span>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="project-destination">
-								<a class="img" style="background-image: url('images/sustainable-governance-and-policies.jpg');">
-									<div class="text">
-										<h3>Sustainable Governance and Policies</h3>
-										<div class="hover-text" style="display: none; transition: all 0.3s ease;">
-											<span>Establish clear sustainability commitments, transparent policies, and compliance with regulations.</span>
-										</div>
-									</div>
-								</a>
-							</div>
+
+						<div class="sustainability-dots">
+							<label for="sustainability-1"></label>
+							<label for="sustainability-2"></label>
+							<label for="sustainability-3"></label>
+							<label for="sustainability-4"></label>
+							<label for="sustainability-5"></label>
 						</div>
 					</div>
 				</div>
@@ -750,31 +923,6 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" defer></script>
-	
-	<!-- Sustainability Carousel Navigation Script -->
-	<script>
-		$(document).ready(function() {
-			// Wait for the carousel to be fully initialized
-			setTimeout(function() {
-				const prevBtn = document.getElementById('prev-sustainability');
-				const nextBtn = document.getElementById('next-sustainability');
-				
-				if (prevBtn && nextBtn) {
-					// Previous button functionality
-					prevBtn.addEventListener('click', function() {
-						$('.carousel-destination').trigger('prev.owl.carousel');
-					});
-					
-					// Next button functionality
-					nextBtn.addEventListener('click', function() {
-						$('.carousel-destination').trigger('next.owl.carousel');
-					});
-					
-					console.log('Navigation arrows initialized successfully');
-				}
-			}, 1000);
-		});
-	</script>
 	
 </body>
 </html>
