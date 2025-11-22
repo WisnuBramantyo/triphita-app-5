@@ -31,8 +31,6 @@ Route::get('/', function () {
 });
 
 Route::get('/search', [DestinationController::class, 'search'])->name('search');
-// Route::get('/destination', [DestinationController::class, 'search'])
-// ->name('destination.search');
 Route::get('/destination', function () {
     return view('coming-soon');
 })->name('destination.search');
@@ -42,3 +40,7 @@ Route::resource('tours', TourController::class);
 Route::resource('hotels', HotelController::class);
 Route::resource('hotels.rooms', RoomController::class);
 Route::resource('bookings', BookingController::class);
+
+// Blog routes
+Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'index'])->name('blogs.index');
+Route::get('/blogs/{id}', [App\Http\Controllers\BlogController::class, 'show'])->name('blogs.show');
