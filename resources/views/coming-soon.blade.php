@@ -65,7 +65,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="/" class="nav-link">Home</a></li>         
-                    <li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
+                    <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li>
                     <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
                     <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -83,7 +83,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ftco-search">
-                            <style>
+                            <!-- <style>
                                 :root {
                                   --ldg-psb-background: #ffffff;
                                   --ldg-psb-border-radius: 0.42em;
@@ -112,7 +112,7 @@
                                 id="lodgify-search-bar"
                                 data-website-id="558326"
                                 data-language-code="en"
-                                data-search-page-url='https://booking.triphita.com/en/all-properties'
+                                data-search-page-url='/destination'
                                 
                                 data-dates-check-in-label='Check-in'
                                 data-dates-check-out-label='Check-out'
@@ -146,7 +146,7 @@
                                         window.LodgifySearchBar.init();
                                     }
                                 });
-                            </script>
+                            </script> -->
                         </div>
                     </div>
                 </div>

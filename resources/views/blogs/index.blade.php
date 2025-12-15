@@ -143,7 +143,7 @@
      <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
+         <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li>
          <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
          <li class="nav-item active"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
@@ -211,7 +211,7 @@
      <div class="overlay"></div>
      <h2>We Are Triphita An Eco Stays and More</h2>
      <p>We will make your days unforgettable and truly sustainable</p>
-     <p class="mb-0"><a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary px-4 py-3">Book Now</a></p>
+     <p class="mb-0"><a href="/destination" class="btn btn-primary px-4 py-3">Book Now</a></p>
    </div>
  </div>
 </div>

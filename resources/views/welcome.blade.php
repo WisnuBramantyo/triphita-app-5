@@ -298,7 +298,7 @@
 				<ul class="navbar-nav ml-auto">
 					<!-- Active state for current page -->
 					<li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="https://booking.triphita.com/en/all-properties" class="nav-link">Stays</a></li>
+					<li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li>
 					<li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -320,7 +320,7 @@
 		  </div>
 		</div>
 	  </div>
-	<section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section" style="margin-top: 50px;">
+	<!-- <section class="ftco-section ftco-no-pb ftco-no-pt" id="search-section" style="margin-top: 50px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -353,7 +353,7 @@
 							id="lodgify-search-bar"
 							data-website-id="558326"
 							data-language-code="en"
-							data-search-page-url='https://booking.triphita.com/en/all-properties'
+							data-search-page-url='/destination'
 							
 							data-dates-check-in-label='Check-in'
 							data-dates-check-out-label='Check-out'
@@ -393,7 +393,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="story-section">
 		<div class="container">
@@ -439,7 +439,7 @@
 			</div>
 			<div class="row justify-content-center mt-4">
 				<div class="col-md-12 text-center">
-					<a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary py-3 px-4">Stay</a>
+					<a href="/destination" class="btn btn-primary py-3 px-4">Stay</a>
 				</div>
 			</div>
 		</div>
@@ -849,7 +849,7 @@
 						<div class="overlay"></div>
 						<h2>We Are Triphita An Eco Stays and More </h2>
 						<p>We will make your days unforgettable and truly sustainable</p>
-						<p class="mb-0"><a href="https://booking.triphita.com/en/all-properties" class="btn btn-primary px-4 py-3">Book Now</a></p>
+						<p class="mb-0"><a href="/destination" class="btn btn-primary px-4 py-3">Book Now</a></p>
 					</div>
 				</div>
 			</div>
