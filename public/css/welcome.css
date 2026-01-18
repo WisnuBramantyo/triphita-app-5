@@ -1,0 +1,284 @@
+/* Project Destination Styles */
+.project-destination .img:hover .hover-text {
+	display: block !important;
+}
+
+.project-destination .text {
+	position: relative;
+	z-index: 1;
+}
+
+.project-destination .hover-text {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+/* Services Section - Consistent Image Sizing */
+.story-section .services.img {
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.story-section .services .media-body {
+	background: transparent;
+	padding: 20px;
+	border-radius: 0 0 8px 8px;
+}
+
+.story-section .services .media-body h3,
+.story-section .services .media-body p {
+	color: #fff;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 767px) {
+	.story-section .services.img {
+		height: 300px;
+	}
+	.story-section .services .media-body {
+		padding: 15px;
+	}
+}
+
+/* Enhanced Stay Button */
+.story-section .btn-primary {
+	background: linear-gradient(135deg, #037d5d 0%, #023f2f 100%);
+	border: 2px solid #037d5d;
+	border-radius: 50px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	box-shadow: 0 4px 15px rgba(3, 125, 93, 0.3);
+	transition: all 0.3s ease;
+	padding: 12px 40px !important;
+	position: relative;
+	overflow: hidden;
+}
+
+.story-section .btn-primary span,
+.story-section .btn-primary {
+	position: relative;
+	z-index: 1;
+}
+
+/* Responsive Navigation Arrows */
+.carousel-nav-left,
+.carousel-nav-right {
+	display: none; /* Hidden by default on mobile */
+}
+
+/* Show arrows on medium screens and larger */
+@media (min-width: 768px) {
+	.carousel-nav-left,
+	.carousel-nav-right {
+		display: block;
+	}
+}
+
+/* Adjust positioning for different screen sizes */
+@media (min-width: 768px) and (max-width: 991px) {
+	.carousel-nav-left {
+		left: -50px;
+	}
+	.carousel-nav-right {
+		right: -50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.carousel-nav-left {
+		left: -60px;
+	}
+	.carousel-nav-right {
+		right: -60px;
+	}
+}
+
+/* Pure CSS Slider (Radio-based) */
+.sustainability-slider {
+	position: relative;
+	min-height: 400px;
+}
+
+.sustainability-slider .slides {
+	display: grid;
+	grid-template-columns: 100%;
+	position: relative;
+	min-height: 400px;
+}
+
+.sustainability-slider input[type="radio"] {
+	display: none;
+}
+
+.sustainability-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transform: scale(0.98);
+	transition: opacity 300ms ease, transform 300ms ease;
+	width: 100%;
+}
+
+.sustainability-slide .img {
+	display: block;
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	border-radius: 8px;
+}
+
+.sustainability-slide .text {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	right: auto;
+	background: rgba(0,0,0,0.6);
+	padding: 10px 14px;
+	border-radius: 6px;
+}
+
+.sustainability-slide .text h3 {
+	color: #fff;
+	margin: 0;
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+/* Default show first slide */
+#sustainability-1:checked ~ .slides .slide-1,
+#sustainability-2:checked ~ .slides .slide-2,
+#sustainability-3:checked ~ .slides .slide-3,
+#sustainability-4:checked ~ .slides .slide-4,
+#sustainability-5:checked ~ .slides .slide-5 {
+	opacity: 1;
+	transform: scale(1);
+	position: relative;
+}
+
+/* Arrow Navigation */
+.sustainability-arrows label {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	background: rgba(255, 255, 255, 0.9);
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 200ms ease, transform 200ms ease;
+	font-size: 20px;
+	color: #037d5d;
+	margin: 0;
+}
+
+.sustainability-arrows label:hover {
+	background: #037d5d;
+	color: #fff;
+	transform: translateY(-50%) scale(1.1);
+}
+
+.sustainability-arrow-left label {
+	left: 20px;
+}
+
+.sustainability-arrow-right label {
+	right: 20px;
+}
+
+/* Hide all arrow labels by default */
+.sustainability-arrows label {
+	display: none;
+}
+
+/* Show appropriate left arrow based on current slide (infinite loop) */
+#sustainability-1:checked ~ .sustainability-arrow-left .arrow-left-1,
+#sustainability-2:checked ~ .sustainability-arrow-left .arrow-left-2,
+#sustainability-3:checked ~ .sustainability-arrow-left .arrow-left-3,
+#sustainability-4:checked ~ .sustainability-arrow-left .arrow-left-4,
+#sustainability-5:checked ~ .sustainability-arrow-left .arrow-left-5 {
+	display: flex;
+}
+
+/* Show appropriate right arrow based on current slide (infinite loop) */
+#sustainability-1:checked ~ .sustainability-arrow-right .arrow-right-1,
+#sustainability-2:checked ~ .sustainability-arrow-right .arrow-right-2,
+#sustainability-3:checked ~ .sustainability-arrow-right .arrow-right-3,
+#sustainability-4:checked ~ .sustainability-arrow-right .arrow-right-4,
+#sustainability-5:checked ~ .sustainability-arrow-right .arrow-right-5 {
+	display: flex;
+}
+
+/* Dots */
+.sustainability-dots {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-top: 16px;
+	position: relative;
+	z-index: 5;
+}
+
+.sustainability-dots label {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #d0d0d0;
+	cursor: pointer;
+	transition: background 200ms ease, transform 200ms ease;
+}
+
+#sustainability-1:checked ~ .sustainability-dots label[for="sustainability-1"],
+#sustainability-2:checked ~ .sustainability-dots label[for="sustainability-2"],
+#sustainability-3:checked ~ .sustainability-dots label[for="sustainability-3"],
+#sustainability-4:checked ~ .sustainability-dots label[for="sustainability-4"],
+#sustainability-5:checked ~ .sustainability-dots label[for="sustainability-5"] {
+	background: #037d5d;
+	transform: scale(1.1);
+}
+
+/* Mobile Adjustments to Prevent Arrow and Text Overlap */
+@media (max-width: 767px) {
+	.sustainability-arrow-left label {
+		left: 10px;
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	.sustainability-arrow-right label {
+		right: 10px;
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	.sustainability-slide .text {
+		bottom: 10px;
+		left: 10px;
+		right: 60px; /* Leave space for right arrow */
+		padding: 8px 12px;
+		max-width: calc(100% - 70px); /* Prevent text from going under arrow */
+	}
+	.sustainability-slide .text h3 {
+		font-size: 1rem;
+	}
+	.sustainability-slide .text p {
+		font-size: 0.85rem;
+	}
+}
+

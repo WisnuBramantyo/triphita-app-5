@@ -143,7 +143,7 @@
      <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li>
+         {{-- <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li> --}}
          <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
          <li class="nav-item active"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
