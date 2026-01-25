@@ -44,3 +44,6 @@ Route::resource('bookings', BookingController::class);
 // Blog routes
 Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'index'])->name('blogs.index');
 Route::get('/blogs/{id}', [App\Http\Controllers\BlogController::class, 'show'])->name('blogs.show');
+
+// Activity routes
+Route::get('/activities/{id}', [App\Http\Controllers\ActivityController::class, 'show'])->name('activities.show');

@@ -1,7 +1,7 @@
 @php
 $featuredStays = [
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-fire.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',
@@ -13,7 +13,7 @@ $featuredStays = [
 		]
 	],
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-sunrise.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',
@@ -25,7 +25,7 @@ $featuredStays = [
 		]
 	],
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-sunset.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',
@@ -37,7 +37,7 @@ $featuredStays = [
 		]
 	],
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-welcome.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',
@@ -49,7 +49,7 @@ $featuredStays = [
 		]
 	],
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-jeep-tour.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',
@@ -61,7 +61,7 @@ $featuredStays = [
 		]
 	],
 	[
-		'url' => 'https://booking.triphita.com/en/kampung-kopi-camp1',
+		'url' => '/activities/1',
 		'image' => 'images/kkc-sustainable-stays.jpg',
 		'price' => '$550/person',
 		'name' => 'Kampung Kopi Camp',

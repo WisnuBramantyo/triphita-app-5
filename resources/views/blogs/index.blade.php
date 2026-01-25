@@ -22,115 +22,6 @@
   
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
-  
-  <style>
-    /* Force consistent blog preview image dimensions with responsive behavior */
-    .blog-entry .block-20 {
-      width: 100% !important;
-      height: 270px !important;
-      max-width: 100% !important;
-      min-width: 100% !important;
-      flex-shrink: 0;
-    }
-    
-    /* Desktop: Fixed width for consistency */
-    @media (min-width: 768px) {
-      .blog-entry .block-20 {
-        width: 289.99px !important;
-        max-width: 289.99px !important;
-        min-width: 289.99px !important;
-      }
-      
-      /* Text content follows image width on desktop */
-      .blog-entry .text {
-        width: 289.99px !important;
-        max-width: 289.99px !important;
-        min-width: 289.99px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-    }
-    
-    /* Tablet: Medium width */
-    @media (min-width: 576px) and (max-width: 767.98px) {
-      .blog-entry .block-20 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-      }
-      
-      /* Text content follows image width on tablet */
-      .blog-entry .text {
-        width: 90% !important;
-        max-width: 90% !important;
-        min-width: 90% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-    }
-    
-    /* Mobile: Full width */
-    @media (max-width: 575.98px) {
-      .blog-entry .block-20 {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-      }
-      
-      /* Text content follows image width on mobile */
-      .blog-entry .text {
-        width: 95% !important;
-        max-width: 95% !important;
-        min-width: 95% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-    }
-    
-    /* Ensure the blog entry container can accommodate the responsive width */
-    .blog-entry {
-      width: 100%;
-      max-width: 100%;
-    }
-    
-    /* Responsive text content positioning - FIXED OVERLAP ISSUE */
-    .blog-entry .text {
-      position: relative;
-      z-index: 1;
-      margin-top: -40px;
-      background: #fff;
-      box-shadow: 0px 10px 23px -8px rgba(0, 0, 0, 0.11);
-      padding: 20px;
-      padding-top: 35px; /* Extra top padding to accommodate the date badge */
-      border-radius: 0 0 8px 8px;
-    }
-    
-    /* Responsive heading size - INCREASED SPACING TO COMPLETELY PREVENT OVERLAP */
-    .blog-entry .text .heading {
-      font-size: 18px;
-      margin-bottom: 16px;
-      font-weight: 600;
-      line-height: 1.3;
-      margin-top: 25px; /* Increased space above title to completely prevent overlap with date badge */
-    }
-    
-    /* Responsive button sizing */
-    .blog-entry .text .btn {
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-    
-    /* Responsive date badge - ADJUSTED POSITIONING */
-    .blog-entry .topp {
-      position: absolute;
-      top: -7px;
-      left: 20px;
-      padding: 5px 15px;
-      background: #3cb372;
-      border-radius: 4px;
-      z-index: 2; /* Ensure it's above the text content */
-    }
-  </style>
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -143,7 +34,7 @@
      <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-         {{-- <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li> --}}
+         <!-- <li class="nav-item"><a href="/stays" class="nav-link">Stays</a></li> -->
          <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
          <li class="nav-item active"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
@@ -171,7 +62,7 @@
       @forelse($blogs as $blog)
       <div class="col-md-4 d-flex ftco-animate">
        <div class="blog-entry justify-content-end">
-        <a href="{{ route('blogs.show', $blog->slug) }}" class="block-20" style="background-image: url('{{ $blog->featured_image ?: 'images/image_1.jpg' }}');">
+        <a href="{{ route('blogs.show', $blog->id) }}" class="block-20" style="background-image: url('{{ $blog->featured_image ?: 'images/image_1.jpg' }}');">
         </a>
         <div class="text">
          <div class="d-flex align-items-center mb-4 topp">
@@ -183,9 +74,9 @@
            <span class="mos">{{ $blog->created_at->format('F') }}</span>
          </div>
        </div>
-       <h3 class="heading"><a href="{{ route('blogs.show', $blog->slug) }}">{{ $blog->title }}</a></h3>
+       <h3 class="heading"><a href="{{ route('blogs.show', $blog->id) }}">{{ $blog->title }}</a></h3>
        <p>{{ $blog->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($blog->content), 160) }}</p>
-       <p><a href="{{ route('blogs.show', $blog->slug) }}" class="btn btn-primary">Read more</a></p>
+       <p><a href="{{ route('blogs.show', $blog->id) }}" class="btn btn-primary">Read more</a></p>
      </div>
    </div>
  </div>
@@ -211,7 +102,7 @@
      <div class="overlay"></div>
      <h2>We Are Triphita An Eco Stays and More</h2>
      <p>We will make your days unforgettable and truly sustainable</p>
-     <p class="mb-0"><a href="/destination" class="btn btn-primary px-4 py-3">Book Now</a></p>
+     <p class="mb-0"><a href="/activities/1" class="btn btn-primary px-4 py-3">Book Now</a></p>
    </div>
  </div>
 </div>
