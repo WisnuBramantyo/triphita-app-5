@@ -4,7 +4,9 @@
 			<div class="col-md pt-5">
 				<div class="ftco-footer-widget pt-md-5 mb-4">
 					<h2 class="ftco-heading-2">About</h2>
-					<p>At Triphita, we curate eco-conscious stays and local experiences that celebrate Indonesia's natural and cultural heritage. Through responsible travel, we strive to protect the planet and uplift communities.</p>
+					<p style="text-align: justify;">At Triphita, we curate meaningful travel experiences rooted in local knowledge and cultural authenticity. From guided tours and immersive adventures to hands-on workshops, each experience is designed to deepen connection with Indonesia's people, nature, and traditions.
+
+Through responsible travel, we aim to support local communities, encourage mindful exploration, and ensure every journey leaves a positive impact.</p>
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 						<li class="ftco-animate"><a href="https://www.instagram.com/my.triphita/" target="_blank" rel="noopener noreferrer"><span class="fa fa-instagram"></span></a></li>
 						<li class="ftco-animate"><a href="https://www.linkedin.com/company/triphita" target="_blank" rel="noopener noreferrer"><span class="fa fa-linkedin"></span></a></li>

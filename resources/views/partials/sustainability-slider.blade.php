@@ -3,32 +3,32 @@ $slides = [
 	[
 		'id' => 1,
 		'image' => '/images/clean-energy-and-transportation.jpg',
-		'title' => 'Locally Owned, Human Connection',
-		'description' => 'Every stay is owned by local hosts, bringing authentic stories, culture, and community warmth to your journey.'
+		'title' => 'Curated, Not Crowded',
+		'description' => 'Every trip is thoughtfully designed,only experiences that respect people and place.'
 	],
 	[
 		'id' => 2,
 		'image' => 'images/water-conservation-and-management.jpg',
-		'title' => 'Visible Sustainability, Real Impact',
-		'description' => 'From solar water heating to plastic-free amenities, our properties practice sustainability you can see and feel — not just talk about.'
+		'title' => 'Led by Local Experts',
+		'description' => 'Our guided tours are hosted by locals and practitioners who share real stories, deep knowledge, and lived culture, not scripts.'
 	],
 	[
 		'id' => 3,
 		'image' => 'images/sustainable-food-systems.jpg',
-		'title' => 'Micro-Scale Comfort',
-		'description' => 'Ten rooms or fewer means peaceful stays, personal attention, and low-impact travel without sacrificing comfort.'
+		'title' => 'Adventure With Intention',
+		'description' => 'From hikes to off-road journeys, our adventures reconnect you with nature while prioritizing safety, balance, and respect for the land.'
 	],
 	[
 		'id' => 4,
 		'image' => 'images/waste-reduction-and-recycling.jpg',
-		'title' => 'Transparent & Hassle-Free',
-		'description' => 'charges, no surprises — just straightforward, stress-free bookings.'
+		'title' => 'Learn by Doing',
+		'description' => 'Through hands-on workshops and classes, you don’t just watch culture, you take part in it, creating meaningful connection.'
 	],
 	[
 		'id' => 5,
 		'image' => 'images/sustainable-materials-and-products.jpg',
 		'title' => 'Travel That Gives Back',
-        'description' => 'Your stay directly supports local livelihoods and helps protect Indonesia\'s natural and cultural heritage.'
+        'description' => 'Every experience supports local communities and sustainable practices, ensuring your journey creates positive impact beyond memories.'
 	]
 ];
 @endphp

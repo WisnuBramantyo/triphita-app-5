@@ -39,44 +39,56 @@
 		<div class="container">
 			<div class="row justify-content-center pb-4">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita Beta</h2>
+					<h2 class="mb-4 font-weight-bold" style="font-size: 2.5em;">Welcome to Triphita</h2>
 					<div class="w-100" style="text-align: center; font-size: 1.1em; max-width: 900px; margin: 0 auto;">
 						<p>Our story begins in Bali, once a paradise of vibrant culture, untouched nature, and heartfelt traditions.</p>
 						<p>But overtourism has left its mark: crowded roads, concrete sprawl, and fading beauty.</p>
-						<p>At Triphita, we believe it's not too late. By reimagining how people travel and stay, we're restoring balance, supporting local hosts, protecting nature, and celebrating Bali's soul.</p>
-						<p>Join us in shaping a new era of conscious travel that preserves the paradise we all fell in love with.</p>
+						<p>At Triphita, we believe it's not too late. By reimagining how people experience Bali, we are restoring balance, supporting local communities, protecting nature, and celebrating the island's soul.</p>
+						<p>Join us in shaping a new era of conscious travel, where every journey helps preserve the paradise we all fell in love with.</p>
 					</div>
 				</div>
 			</div>
-			<div class="row d-flex">
-				<div class="col-md-6 mb-4">
-					<div class="services services-1 color-1 d-block img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="flaticon-paragliding"></span>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="story-carousel owl-carousel">
+						<!-- Slide 1: Adventure -->
+						<div class="item">
+							<div class="services services-1 color-1 d-block img" style="background-image: url(images/kkc-sustainable-stays.jpg);">
+								<div class="media-body">
+									<h3 class="heading mb-3">Adventure</h3>
+									<p>For those who seek movement, challenge, and raw beauty.</p>
+									<p>From jeep journeys across volcanic landscapes to mountain hikes above the clouds, Adventure experiences bring you closer to Bali's untamed side.</p>
+								</div>
+							</div>
 						</div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Sustainable Accommodation (Beta)</h3>
-							<p>Experience hotel comfort, local warmth, and real impact.</p>
-							<p>Every Triphita micro stay blends convenience with conscience, small-scale, community-owned, and built on simple, visible sustainability.</p>
+						
+						<!-- Slide 2: Guided Tour -->
+						<div class="item">
+							<div class="services services-1 color-2 d-block img" style="background-image: url(images/kkc-jeep-tour.jpg);">
+								<div class="media-body">
+									<h3 class="heading mb-3">Guided Tour</h3>
+									<p>For travelers who want to understand, not just observe.</p>
+									<p>Explore villages, heritage paths, and sustainable practice sites with local guides who share stories, traditions, and real environmental solutions shaping Bali's future.</p>
+								</div>
+							</div>
 						</div>
-					</div>      
-				</div>
-				<div class="col-md-6 mb-4">
-					<div class="services services-1 color-2 d-block img" style="background-image: url(images/kkc-jeep-tour.jpg);">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="flaticon-route"></span>
+						
+						<!-- Slide 3: Workshop & Class -->
+						<div class="item">
+							<div class="services services-1 color-3 d-block img" style="background-image: url(images/kkc-welcome.jpg);">
+								<div class="media-body">
+									<h3 class="heading mb-3">Workshop & Class</h3>
+									<p>For hands-on learners and curious minds.</p>
+									<p>Cook with local families, craft with artisans, and learn directly through immersive workshops that turn travel into participation.</p>
+								</div>
+							</div>
 						</div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Sustainable Experience (Coming Soon)</h3>
-							<p>Discover the beauty of nature and the richness of local culture with our fun and immersive tours.</p>
-							<p>Designed to protect the environment and celebrate traditions, our tours ensure unforgettable experiences that leave a positive impact on the places you visit</p>
-						</div>
-					</div>    
+					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center mt-4">
 				<div class="col-md-12 text-center">
-					<a href="/destination" class="btn btn-primary py-3 px-4">Stay</a>
+					<a href="https://wa.me/6281234567890" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
 				</div>
 			</div>
 		</div>
@@ -86,7 +98,7 @@
 
 	@include('partials.featured-stays')
 
-	<section class="ftco-section ftco-about img" style="background-image: url(images/kkc-welcome.jpg);">
+	<section class="ftco-section ftco-about img" style="background-image: url(images/kkc-welcome.jpg); margin-bottom: 60px;">
 		<div class="overlay"></div>
 		<div class="container py-md-5">
 			<div class="row py-md-5">
@@ -168,7 +180,7 @@
 		</div>
 	</section>
 
-	<section class="ftco-intro ftco-section ftco-no-pt">
+	<!-- <section class="ftco-intro ftco-section ftco-no-pt">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12 text-center">
@@ -181,7 +193,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	@include('partials.footer')
 
@@ -209,5 +221,87 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" defer></script>
+	
+	<!-- Story Section Carousel -->
+	<script>
+		$(document).ready(function() {
+			var storyCarousel = $('.story-carousel');
+			
+			// Destroy existing carousel if it exists
+			if (storyCarousel.data('owlCarousel')) {
+				storyCarousel.trigger('destroy.owl.carousel');
+				storyCarousel.removeClass('owl-carousel owl-loaded');
+				storyCarousel.find('.owl-stage-outer').children().unwrap();
+			}
+			
+			// Reinitialize carousel
+			storyCarousel.owlCarousel({
+				loop: true,
+				margin: 30,
+				nav: false,
+				dots: true,
+				dotsEach: true,
+				autoplay: false,
+				autoplayTimeout: 5000,
+				autoplayHoverPause: true,
+				touchDrag: true,
+				mouseDrag: true,
+				pullDrag: true,
+				responsive: {
+					0: {
+						items: 1,
+						margin: 15
+					},
+					768: {
+						items: 2,
+						margin: 20
+					},
+					992: {
+						items: 3,
+						margin: 30
+					}
+				}
+			});
+			
+			// Featured Experiences Carousel
+			var featuredCarousel = $('.featured-experiences-carousel');
+			
+			// Destroy existing carousel if it exists
+			if (featuredCarousel.data('owlCarousel')) {
+				featuredCarousel.trigger('destroy.owl.carousel');
+				featuredCarousel.removeClass('owl-carousel owl-loaded');
+				featuredCarousel.find('.owl-stage-outer').children().unwrap();
+			}
+			
+			// Initialize Featured Experiences Carousel
+			featuredCarousel.owlCarousel({
+				loop: true,
+				margin: 30,
+				nav: false,
+				dots: true,
+				dotsEach: true,
+				autoplay: false,
+				autoplayTimeout: 5000,
+				autoplayHoverPause: true,
+				touchDrag: true,
+				mouseDrag: true,
+				pullDrag: true,
+				responsive: {
+					0: {
+						items: 1,
+						margin: 15
+					},
+					768: {
+						items: 2,
+						margin: 20
+					},
+					992: {
+						items: 4,
+						margin: 30
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>

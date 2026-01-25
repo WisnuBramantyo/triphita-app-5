@@ -2,20 +2,20 @@
 $testimonials = [
 	[
 		'rating' => 5,
-		'text' => 'Triphita made it so easy to find a beautiful, eco-friendly stay that aligned with my values.',
+		'text' => 'Through Triphita, I discovered experiences I would have never found on my own. The local guide shared stories and perspectives that made the journey feel truly personal.',
+		'name' => 'Lana T.',
+		'position' => 'Visitor'
+	],
+	[
+		'rating' => 5,
+		'text' => 'Triphita made it incredibly easy to choose meaningful adventures. Everything felt well thought out, respectful, and connected to the place we were exploring.',
 		'name' => 'Roger Scott',
 		'position' => 'Visitor'
 	],
 	[
 		'rating' => 5,
-		'text' => 'Every part of the trip felt intentional and meaningful — it\'s travel with heart.',
+		'text' => 'Every experience felt intentional, from the people we met to what we learned along the way. This is travel that stays with you long after the trip ends.',
 		'name' => 'Dimas R.',
-		'position' => 'Visitor'
-	],
-	[
-		'rating' => 5,
-		'text' => 'Thanks to Triphita, I discovered hidden gems and stayed in places that truly care about sustainability.',
-		'name' => 'Lana T.',
 		'position' => 'Visitor'
 	]
 ];

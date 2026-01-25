@@ -15,34 +15,222 @@
 	margin-top: 5px;
 }
 
+/* Story Carousel Styles */
+.story-carousel {
+	margin-bottom: 40px;
+}
+
+.story-carousel .item {
+	padding: 0 10px;
+}
+
+.story-carousel .owl-nav {
+	display: none !important;
+}
+
+.story-carousel .owl-dots {
+	text-align: center;
+	margin-top: 5px;
+	display: block !important;
+}
+
+.story-carousel .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	margin: 0 5px;
+}
+
+.story-carousel .owl-dots .owl-dot span {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(60, 179, 114, 0.3) !important;
+	display: block;
+	transition: all 0.3s ease;
+	margin: 0;
+}
+
+.story-carousel .owl-dots .owl-dot.active span,
+.story-carousel .owl-dots .owl-dot:hover span {
+	background: #3cb372 !important;
+	width: 30px;
+	border-radius: 6px;
+}
+
+/* Featured Experiences Carousel Styles */
+.featured-experiences-carousel {
+	margin-bottom: 40px;
+}
+
+.featured-experiences-carousel .item {
+	padding: 0 10px;
+}
+
+.featured-experiences-carousel .owl-nav {
+	display: none !important;
+}
+
+.featured-experiences-carousel .owl-dots {
+	text-align: center;
+	margin-top: 20px;
+	display: block !important;
+}
+
+.featured-experiences-carousel .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	margin: 0 5px;
+}
+
+.featured-experiences-carousel .owl-dots .owl-dot span {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(60, 179, 114, 0.3) !important;
+	display: block;
+	transition: all 0.3s ease;
+	margin: 0;
+}
+
+.featured-experiences-carousel .owl-dots .owl-dot.active span,
+.featured-experiences-carousel .owl-dots .owl-dot:hover span {
+	background: #3cb372 !important;
+	width: 30px;
+	border-radius: 6px;
+}
+
+/* Mobile adjustments for Featured Experiences */
+@media (max-width: 767px) {
+	.featured-experiences-carousel .item {
+		padding: 0 5px;
+	}
+	
+	.featured-experiences-carousel .owl-dots {
+		margin-top: 15px;
+	}
+}
+
 /* Services Section - Consistent Image Sizing */
 .story-section .services.img {
-	height: 400px;
+	min-height: 450px;
+	height: auto;
 	background-size: cover;
 	background-position: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	position: relative;
+	padding-bottom: 0;
+	overflow: hidden;
+}
+
+.story-section .services .icon {
+	margin-bottom: 20px !important;
+	margin-top: auto;
+	position: relative;
+	z-index: 2;
+	padding-top: 20px;
+	margin-left: 20px !important;
+	margin-right: 20px;
+	width: auto;
 }
 
 .story-section .services .media-body {
 	background: transparent;
-	padding: 20px;
+	padding: 30px 20px 20px;
+	padding-top: 30px;
 	border-radius: 0 0 8px 8px;
+	margin-top: 0;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	flex-shrink: 0;
 }
 
-.story-section .services .media-body h3,
+.story-section .services .media-body h3 {
+	color: #fff;
+	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
 .story-section .services .media-body p {
 	color: #fff;
+	margin-bottom: 10px;
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.story-section .services .media-body p:last-child {
+	margin-bottom: 0;
+}
+
+/* Tablet Responsive Adjustments */
+@media (max-width: 991px) and (min-width: 768px) {
+	.story-section .services.img {
+		min-height: 420px;
+	}
+	
+	.story-section .services .media-body {
+		padding: 22px 18px 18px;
+	}
+	
+	.story-section .services .media-body h3 {
+		font-size: 19px;
+	}
+	
+	.story-section .services .media-body p {
+		font-size: 14px;
+	}
 }
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 767px) {
-	.story-section .services.img {
-		height: 300px;
+	.story-carousel .item {
+		padding: 0 5px;
 	}
+	
+	.story-section .services.img {
+		min-height: 380px;
+	}
+	
+	.story-section .services .icon {
+		margin-bottom: 15px !important;
+	}
+	
 	.story-section .services .media-body {
-		padding: 15px;
+		padding: 20px 15px 15px;
+	}
+	
+	.story-section .services .media-body h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	
+	.story-section .services .media-body p {
+		font-size: 14px;
+		line-height: 1.5;
+		margin-bottom: 8px;
+	}
+}
+
+/* Extra Small Mobile */
+@media (max-width: 575px) {
+	.story-section .services.img {
+		min-height: 350px;
+	}
+	
+	.story-section .services .media-body {
+		padding: 18px 12px 12px;
+	}
+	
+	.story-section .services .media-body h3 {
+		font-size: 17px;
+	}
+	
+	.story-section .services .media-body p {
+		font-size: 13px;
 	}
 }
 
