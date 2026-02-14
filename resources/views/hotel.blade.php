@@ -26,7 +26,7 @@
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
    <div class="container">
-     <a class="navbar-brand" href="/">Triphita<span>Eco Stays and More</span></a>
+     <a class="navbar-brand" href="/">Triphita<span>Journey, Memory, and Purpose</span></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="oi oi-menu"></span> Menu
      </button>
@@ -35,7 +35,7 @@
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
          {{-- <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li> --}}
-         <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
+         <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link">Experience</a></li>
          <li class="nav-item"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
        </ul>
@@ -119,7 +119,7 @@
            <div class="col-md-4 ftco-animate">
               <div class="project-wrap">
                  <a href="rooms" class="img" style="background-image: url('{{ asset('images/destination-1.jpg') }}');">
-                    <span class="price">${{ number_format($hotel->price, 2) }}/person</span>
+                    <span class="price">Rp {{ number_format($hotel->price, 0, ',', '.') }}/person</span>
                  </a>
                  <div class="text p-4">
                     <span class="days">Available from {{ $hotel->available_from }} to {{ $hotel->available_to }}</span>
@@ -149,7 +149,7 @@
    <div class="col-md-12 text-center">
     <div class="img"  style="background-image: url(images/bg_2.jpg);">
      <div class="overlay"></div>
-     <h2>We Are Triphita An Eco Stays and More</h2>
+     <h2>We Are Triphita — Journey, Memory, and Purpose</h2>
      <p>We can manage your dream building A small river named Duden flows by their place</p>
      <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a></p>
    </div>

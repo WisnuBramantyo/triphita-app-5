@@ -3,7 +3,7 @@ $featuredStays = [
 	[
 		'url' => '/activities/1',
 		'image' => 'images/kkc-fire.jpg',
-		'price' => '$550/person',
+		'price' => 'Rp 8.250.000/orang',
 		'name' => 'Kampung Kopi Camp',
 		'location' => 'Pupuan, Tabanan, Bali',
 		'amenities' => [
@@ -15,7 +15,7 @@ $featuredStays = [
 	[
 		'url' => '/activities/1',
 		'image' => 'images/kkc-sunrise.jpg',
-		'price' => '$550/person',
+		'price' => 'Rp 8.250.000/orang',
 		'name' => 'Kampung Kopi Camp',
 		'location' => 'Pupuan, Tabanan, Bali',
 		'amenities' => [
@@ -27,7 +27,7 @@ $featuredStays = [
 	[
 		'url' => '/activities/1',
 		'image' => 'images/kkc-sunset.jpg',
-		'price' => '$550/person',
+		'price' => 'Rp 8.250.000/orang',
 		'name' => 'Kampung Kopi Camp',
 		'location' => 'Pupuan, Tabanan, Bali',
 		'amenities' => [
@@ -39,7 +39,7 @@ $featuredStays = [
 	[
 		'url' => '/activities/1',
 		'image' => 'images/kkc-welcome.jpg',
-		'price' => '$550/person',
+		'price' => 'Rp 8.250.000/orang',
 		'name' => 'Kampung Kopi Camp',
 		'location' => 'Pupuan, Tabanan, Bali',
 		'amenities' => [
@@ -51,7 +51,7 @@ $featuredStays = [
 ];
 @endphp
 
-<section class="ftco-section">
+<section class="ftco-section featured-experiences-section">
 	<div class="container">
 		<div class="row justify-content-center pb-4">
 			<div class="col-md-12 heading-section text-center ftco-animate">

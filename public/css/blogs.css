@@ -1,0 +1,118 @@
+/* Blogs listing: equal card sizes and tidy layout */
+
+.blogs-listing .row.d-flex {
+  align-items: stretch;
+}
+
+.blogs-listing .blog-entry {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.blogs-listing .block-20 {
+  height: 220px;
+  flex-shrink: 0;
+}
+
+.blogs-listing .blog-entry .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.blogs-listing .blog-entry .heading {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.blogs-listing .blog-entry .excerpt {
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  margin-bottom: 1rem;
+}
+
+/* Compact pagination: remove huge arrows, small text links */
+.blogs-pagination nav[role="navigation"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.blogs-pagination nav[role="navigation"] a,
+.blogs-pagination nav[role="navigation"] span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.35rem 0.6rem;
+  margin: 0 1px;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #3cb372;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.blogs-pagination nav[role="navigation"] a:hover {
+  background: rgba(60, 179, 114, 0.1);
+  border-color: #3cb372;
+  color: #2d8f5a;
+}
+
+.blogs-pagination nav[role="navigation"] span[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.blogs-pagination nav[role="navigation"] svg {
+  display: none;
+}
+
+.blogs-pagination nav[role="navigation"] .relative.inline-flex {
+  margin: 0 2px;
+}
+
+/* Bootstrap pagination override when used – theme green */
+.blogs-pagination .pagination {
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.blogs-pagination .pagination .page-link {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.875rem;
+  color: #3cb372;
+  border-color: #dee2e6;
+}
+
+.blogs-pagination .pagination .page-link:hover {
+  color: #2d8f5a;
+  background: rgba(60, 179, 114, 0.1);
+  border-color: #3cb372;
+}
+
+.blogs-pagination .pagination .page-item.active .page-link {
+  background-color: #3cb372;
+  border-color: #3cb372;
+  color: #fff;
+}
+
+.blogs-pagination .pagination .page-item:first-child .page-link,
+.blogs-pagination .pagination .page-item:last-child .page-link {
+  font-size: 0.8rem;
+  color: #3cb372;
+}

@@ -80,7 +80,7 @@
     <!-- Add navigation section here -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white ftco-navbar-light position-sticky" id="ftco-navbar">    
         <div class="container">
-            <a class="navbar-brand" href="/">Triphita<span>Eco Stays and More</span></a>
+            <a class="navbar-brand" href="/">Triphita<span>Journey, Memory, and Purpose</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -89,7 +89,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="/" class="nav-link">Home</a></li>         
                     {{-- <li class="nav-item"><a href="/destination" class="nav-link">Stays</a></li> --}}
-                    <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link">Experience</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -178,7 +178,7 @@
                         <p>Refund & reschedule available until Dec 30, 2024.</p>
                     </div>
                     <div class="col-md-3 text-end">
-                        <p class="price">IDR 446,281 / night</p>
+                        <p class="price">Rp 446.281 / malam</p>
                         <a href="booking-detail" class="btn btn-primary">Book Now</a>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                         <p>Refund & reschedule available until Dec 30, 2024.</p>
                     </div>
                     <div class="col-md-3 text-end">
-                        <p class="price">IDR 520,661 / night</p>
+                        <p class="price">Rp 520.661 / malam</p>
                         <a href="booking-detail" class="btn btn-primary">Book Now</a>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TourController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
@@ -27,7 +28,11 @@ Route::get('/payment', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    $blogs = Blog::where('status', 'published')
+        ->orderBy('created_at', 'desc')
+        ->limit(12)
+        ->get();
+    return view('welcome', compact('blogs'));
 });
 
 Route::get('/search', [DestinationController::class, 'search'])->name('search');
@@ -46,4 +51,5 @@ Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'index'])->nam
 Route::get('/blogs/{id}', [App\Http\Controllers\BlogController::class, 'show'])->name('blogs.show');
 
 // Activity routes
+Route::get('/activities', [App\Http\Controllers\ActivityController::class, 'index'])->name('activities.index');
 Route::get('/activities/{id}', [App\Http\Controllers\ActivityController::class, 'show'])->name('activities.show');

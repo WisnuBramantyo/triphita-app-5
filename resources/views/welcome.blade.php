@@ -88,7 +88,14 @@
 			</div>
 			<div class="row justify-content-center mt-4">
 				<div class="col-md-12 text-center">
-					<a href="https://wa.me/6281234567890" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
+					<div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 1.5rem;">
+						@php
+	$waMessage = "Hello \nI'm interested in booking the following tour:\n\n Tour: {{tour_name}}\n Package: {{package_name}}\n Price: {{price}}\n\nCould you please help me with availability and booking details?\nThanks a lot!";
+	$waUrl = 'https://wa.me/6287818653533?text=' . rawurlencode($waMessage);
+@endphp
+						<a href="{{ $waUrl }}" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
+						<a href="{{ route('activities.index') }}" class="btn btn-primary py-3 px-4">Explore</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,58 +128,46 @@
 					<h2 class="mb-4">Recent Post</h2>
 				</div>
 			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');"></a>
-						<div class="text">
-							<div class="d-flex align-items-center mb-4 topp">
-								<div class="one">
-									<span class="day">11</span>
-								</div>
-								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="blog-carousel-wrapper">
+						<div class="blog-carousel owl-carousel">
+						@forelse($blogs ?? [] as $blog)
+						<div class="item">
+							<div class="blog-entry justify-content-end">
+								<a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}" class="block-20" style="background-image: url('{{ $blog->featured_image ? asset($blog->featured_image) : asset('images/image_1.jpg') }}');"></a>
+								<div class="text">
+									<div class="d-flex align-items-center mb-4 topp">
+										<div class="one">
+											<span class="day">{{ $blog->created_at->format('d') }}</span>
+										</div>
+										<div class="two">
+											<span class="yr">{{ $blog->created_at->format('Y') }}</span>
+											<span class="mos">{{ $blog->created_at->format('F') }}</span>
+										</div>
+									</div>
+									<h3 class="heading"><a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}">{{ $blog->title }}</a></h3>
+									<p>{{ $blog->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($blog->content ?? ''), 120) }}</p>
+									<p><a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}" class="btn btn-primary">Read more</a></p>
 								</div>
 							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');"></a>
-						<div class="text">
-							<div class="d-flex align-items-center mb-4 topp">
-								<div class="one">
-									<span class="day">11</span>
-								</div>
-								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
+						@empty
+						<div class="item">
+							<div class="blog-entry justify-content-end">
+								<a href="{{ route('blogs.index') }}" class="block-20" style="background-image: url('{{ asset('images/image_1.jpg') }}');"></a>
+								<div class="text">
+									<div class="d-flex align-items-center mb-4 topp">
+										<div class="one"><span class="day">—</span></div>
+										<div class="two"><span class="yr">—</span><span class="mos">—</span></div>
+									</div>
+									<h3 class="heading"><a href="{{ route('blogs.index') }}">No posts yet</a></h3>
+									<p>Visit our blog for stories and updates.</p>
+									<p><a href="{{ route('blogs.index') }}" class="btn btn-primary">Go to Blog</a></p>
 								</div>
 							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');"></a>
-						<div class="text">
-							<div class="d-flex align-items-center mb-4 topp">
-								<div class="one">
-									<span class="day">11</span>
-								</div>
-								<div class="two">
-									<span class="yr">2020</span>
-									<span class="mos">September</span>
-								</div>
-							</div>
-							<h3 class="heading"><a href="#">Most Popular Place In This World</a></h3>
-							<p><a href="#" class="btn btn-primary">Read more</a></p>
+						@endforelse
 						</div>
 					</div>
 				</div>
@@ -186,7 +181,7 @@
 				<div class="col-md-12 text-center">
 					<div class="img" style="background-image: url(images/bg_2.jpg);">
 						<div class="overlay"></div>
-						<h2>We Are Triphita An Eco Stays and More</h2>
+						<h2>We Are Triphita — Journey, Memory, and Purpose</h2>
 						<p>We will make your days unforgettable and truly sustainable</p>
 						<p class="mb-0"><a href="/destination" class="btn btn-primary px-4 py-3">Book Now</a></p>
 					</div>
@@ -238,7 +233,8 @@
 			storyCarousel.owlCarousel({
 				loop: true,
 				margin: 30,
-				nav: false,
+				nav: true,
+				navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
 				dots: true,
 				dotsEach: true,
 				autoplay: false,
@@ -277,7 +273,8 @@
 			featuredCarousel.owlCarousel({
 				loop: true,
 				margin: 30,
-				nav: false,
+				nav: true,
+				navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
 				dots: true,
 				dotsEach: true,
 				autoplay: false,
@@ -301,6 +298,31 @@
 					}
 				}
 			});
+
+			// Blog carousel (dynamic, with nav and dots at bottom)
+			var blogCarousel = $('.blog-carousel');
+			if (blogCarousel.length && blogCarousel.children('.item').length) {
+				if (blogCarousel.data('owlCarousel')) {
+					blogCarousel.trigger('destroy.owl.carousel');
+					blogCarousel.removeClass('owl-carousel owl-loaded');
+					blogCarousel.find('.owl-stage-outer').children().unwrap();
+				}
+				blogCarousel.owlCarousel({
+					loop: true,
+					margin: 30,
+					nav: true,
+					dots: true,
+					navText: ['<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-right"></span>'],
+					autoplay: false,
+					touchDrag: true,
+					mouseDrag: true,
+					responsive: {
+						0: { items: 1, margin: 15 },
+						768: { items: 2, margin: 20 },
+						992: { items: 3, margin: 30 }
+					}
+				});
+			}
 		});
 	</script>
 </body>

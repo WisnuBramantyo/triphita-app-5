@@ -111,10 +111,19 @@
 			<div class="grid lg:grid-cols-3 gap-10">
 				<div class="lg:col-span-2 space-y-10">
 					<div>
+						@php
+							$categoryLabels = [
+								'Tours' => 'Adventures',
+								'Experiences' => 'Guided Tours',
+								'Workshops' => 'Workshops & Classes',
+							];
+							$categoryLabel = $categoryLabels[$activity->category ?? ''] ?? ($activity->category ?? null);
+						@endphp
+						@if($categoryLabel)
 						<div class="flex flex-wrap gap-2 mb-4">
-							<span class="px-3 py-1 bg-green-theme-light text-green-theme rounded-full text-sm font-medium">Featured</span>
-							<span class="px-3 py-1 border border-gray-200 text-gray-600 rounded-full text-sm font-medium">Beach & Resort</span>
+							<span class="px-3 py-1 bg-green-theme-light text-green-theme rounded-full text-sm font-medium">{{ $categoryLabel }}</span>
 						</div>
+						@endif
 						<h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight font-serif">
 							{{ $activity->title }}
 						</h1>
@@ -122,11 +131,6 @@
 							<div class="flex items-center gap-1.5">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-theme"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
 								<span>{{ $activity->location }}</span>
-							</div>
-							<div class="flex items-center gap-1.5">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-								<span class="font-semibold text-gray-900">{{ $activity->rating }}</span>
-								<span>({{ number_format($activity->review_count) }} reviews)</span>
 							</div>
 							<div class="flex items-center gap-1.5">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -144,7 +148,6 @@
 						<div class="flex bg-gray-100 p-1 rounded-full w-fit mb-8">
 							<button @click="tab = 'overview'" :class="tab === 'overview' ? 'bg-white shadow-sm' : ''" class="px-6 py-2 rounded-full text-sm font-medium transition-all">Overview</button>
 							<button @click="tab = 'facilities'" :class="tab === 'facilities' ? 'bg-white shadow-sm' : ''" class="px-6 py-2 rounded-full text-sm font-medium transition-all">Facilities</button>
-							<button @click="tab = 'reviews'" :class="tab === 'reviews' ? 'bg-white shadow-sm' : ''" class="px-6 py-2 rounded-full text-sm font-medium transition-all">Reviews</button>
 						</div>
 
 						<div x-show="tab === 'overview'" class="space-y-8" x-transition>
@@ -181,20 +184,21 @@
 							</div>
 							@endforeach
 						</div>
-
-						<div x-show="tab === 'reviews'" class="space-y-8" x-transition>
-							<div class="text-center py-12 text-gray-500">
-								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-								<p class="text-lg">Reviews section coming soon</p>
-								<p class="text-sm mt-2">Be the first to share your experience!</p>
-							</div>
-						</div>
 					</div>
 				</div>
 
 				<!-- Booking Sidebar -->
 				<div class="lg:col-span-1">
-					<div class="sticky top-6 space-y-4" x-data="{ selectedPackage: '{{ $activity->packages[0]['id'] }}' }">
+					<div class="sticky top-6 space-y-4" x-data="{
+						selectedPackage: '{{ $activity->packages[0]['id'] }}',
+						tourName: {{ json_encode($activity->title) }},
+						packages: {{ json_encode(array_map(fn($p) => ['id' => $p['id'], 'name' => $p['name'], 'price' => 'Rp ' . number_format($p['price'], 0, ',', '.')], $activity->packages)) }},
+						getWhatsAppUrl() {
+							const p = this.packages.find(x => x.id === this.selectedPackage) || this.packages[0];
+							const msg = `Hello \nI'm interested in booking the following tour:\n\n Tour: ${this.tourName}\n Package: ${p.name}\n Price: ${p.price}\n\nCould you please help me with availability and booking details?\nThanks a lot!`;
+							return 'https://wa.me/6287818653533?text=' + encodeURIComponent(msg);
+						}
+					}">
 						<h3 class="text-xl font-bold mb-4 font-serif">Select Your Package</h3>
 						
 						@foreach($activity->packages as $package)
@@ -213,8 +217,8 @@
 								<div>
 									<h4 class="font-bold text-lg text-gray-900">{{ $package['name'] }}</h4>
 									<div class="flex items-baseline gap-2 mt-1">
-										<span class="text-2xl font-bold text-gray-900">${{ $package['price'] }}</span>
-										<span class="text-sm text-gray-400 line-through">${{ $package['original_price'] }}</span>
+										<span class="text-2xl font-bold text-gray-900">Rp {{ number_format($package['price'], 0, ',', '.') }}</span>
+										<span class="text-sm text-gray-400 line-through">Rp {{ number_format($package['original_price'], 0, ',', '.') }}</span>
 										<span class="text-xs text-gray-500">/person</span>
 									</div>
 								</div>
@@ -237,7 +241,7 @@
 						@endforeach
 
 						<a 
-							href="https://wa.me/6281234567890"
+							:href="getWhatsAppUrl()"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="w-full py-5 bg-green-theme text-white text-lg font-bold rounded-xl mt-6 shadow-lg transition-all active:scale-95 block text-center"

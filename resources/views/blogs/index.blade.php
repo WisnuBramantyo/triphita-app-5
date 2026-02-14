@@ -22,11 +22,12 @@
   
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blogs.css">
 </head>
 <body>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
    <div class="container">
-     <a class="navbar-brand" href="/">Triphita<span>Eco Stays and More</span></a>
+     <a class="navbar-brand" href="/">Triphita<span>Journey, Memory, and Purpose</span></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="oi oi-menu"></span> Menu
      </button>
@@ -35,7 +36,7 @@
        <ul class="navbar-nav ml-auto">
          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
          <!-- <li class="nav-item"><a href="/stays" class="nav-link">Stays</a></li> -->
-         <li class="nav-item"><a href="/destination" class="nav-link">Experience</a></li>
+         <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link">Experience</a></li>
          <li class="nav-item active"><a href="/blogs" class="nav-link">Blog</a></li>
          <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
        </ul>
@@ -56,42 +57,41 @@
  </div>
 </section>
 
-<section class="ftco-section">
+<section class="ftco-section blogs-listing">
   <div class="container">
     <div class="row d-flex">
       @forelse($blogs as $blog)
-      <div class="col-md-4 d-flex ftco-animate">
-       <div class="blog-entry justify-content-end">
-        <a href="{{ route('blogs.show', $blog->id) }}" class="block-20" style="background-image: url('{{ $blog->featured_image ?: 'images/image_1.jpg' }}');">
-        </a>
-        <div class="text">
-         <div class="d-flex align-items-center mb-4 topp">
-          <div class="one">
-           <span class="day">{{ $blog->created_at->format('d') }}</span>
-         </div>
-         <div class="two">
-           <span class="yr">{{ $blog->created_at->format('Y') }}</span>
-           <span class="mos">{{ $blog->created_at->format('F') }}</span>
-         </div>
-       </div>
-       <h3 class="heading"><a href="{{ route('blogs.show', $blog->id) }}">{{ $blog->title }}</a></h3>
-       <p>{{ $blog->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($blog->content), 160) }}</p>
-       <p><a href="{{ route('blogs.show', $blog->id) }}" class="btn btn-primary">Read more</a></p>
-     </div>
-   </div>
- </div>
- @empty
- <div class="col-md-12 text-center">
-   <p>No blog posts yet.</p>
- </div>
- @endforelse
-</div>
-<div class="row mt-5">
-  <div class="col text-center">
-    {{ $blogs->links() }}
+      <div class="col-md-4 d-flex ftco-animate mb-4">
+        <div class="blog-entry justify-content-end w-100">
+          <a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}" class="block-20" style="background-image: url('{{ $blog->featured_image ?: 'images/image_1.jpg' }}');"></a>
+          <div class="text">
+            <div class="d-flex align-items-center mb-4 topp">
+              <div class="one">
+                <span class="day">{{ $blog->created_at->format('d') }}</span>
+              </div>
+              <div class="two">
+                <span class="yr">{{ $blog->created_at->format('Y') }}</span>
+                <span class="mos">{{ $blog->created_at->format('F') }}</span>
+              </div>
+            </div>
+            <h3 class="heading"><a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}">{{ $blog->title }}</a></h3>
+            <p class="excerpt">{{ $blog->excerpt ?? \Illuminate\Support\Str::limit(strip_tags($blog->content), 160) }}</p>
+            <p class="mb-0"><a href="{{ route('blogs.show', $blog->slug ?? $blog->id) }}" class="btn btn-primary">Read more</a></p>
+          </div>
+        </div>
+      </div>
+      @empty
+      <div class="col-md-12 text-center">
+        <p>No blog posts yet.</p>
+      </div>
+      @endforelse
+    </div>
+    <div class="row mt-5">
+      <div class="col text-center blogs-pagination">
+        {{ $blogs->links() }}
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 
 <!-- <section class="ftco-intro ftco-section ftco-no-pt">
@@ -100,7 +100,7 @@
    <div class="col-md-12 text-center">
     <div class="img"  style="background-image: url('images/bg_2.jpg');">
      <div class="overlay"></div>
-     <h2>We Are Triphita An Eco Stays and More</h2>
+     <h2>We Are Triphita — Journey, Memory, and Purpose</h2>
      <p>We will make your days unforgettable and truly sustainable</p>
      <p class="mb-0"><a href="/activities/1" class="btn btn-primary px-4 py-3">Book Now</a></p>
    </div>

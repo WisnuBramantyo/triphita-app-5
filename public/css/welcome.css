@@ -15,8 +15,9 @@
 	margin-top: 5px;
 }
 
-/* Story Carousel Styles */
+/* Story Carousel Styles (Adventure, Guided Tour, Workshop & Class) */
 .story-carousel {
+	position: relative;
 	margin-bottom: 40px;
 }
 
@@ -25,7 +26,54 @@
 }
 
 .story-carousel .owl-nav {
-	display: none !important;
+	display: block !important;
+	position: absolute;
+	top: 32%;
+	left: 0;
+	right: 0;
+	margin: 0 !important;
+	padding: 0;
+	transform: translateY(-50%);
+	pointer-events: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.story-carousel .owl-nav [class*="owl-"] {
+	position: absolute !important;
+	margin: 0 !important;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.9) !important;
+	color: #037d5d !important;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	transition: background 200ms ease, transform 200ms ease, color 200ms ease;
+	pointer-events: auto;
+}
+
+.story-carousel .owl-nav [class*="owl-"] span {
+	color: inherit;
+}
+
+.story-carousel .owl-nav [class*="owl-"]:hover {
+	background: #037d5d !important;
+	color: #fff !important;
+	transform: scale(1.1);
+}
+
+.story-carousel .owl-nav .owl-prev {
+	left: -18px;
+}
+
+.story-carousel .owl-nav .owl-next {
+	right: -18px;
+	left: auto;
 }
 
 .story-carousel .owl-dots {
@@ -62,12 +110,63 @@
 	margin-bottom: 40px;
 }
 
+.featured-experiences-carousel {
+	position: relative;
+}
+
 .featured-experiences-carousel .item {
 	padding: 0 10px;
 }
 
 .featured-experiences-carousel .owl-nav {
-	display: none !important;
+	display: block !important;
+	position: absolute;
+	top: 32%;
+	left: 0;
+	right: 0;
+	margin: 0 !important;
+	padding: 0;
+	transform: translateY(-50%);
+	pointer-events: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.featured-experiences-carousel .owl-nav [class*="owl-"] {
+	position: absolute !important;
+	margin: 0 !important;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.9) !important;
+	color: #037d5d !important;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	transition: background 200ms ease, transform 200ms ease, color 200ms ease;
+	pointer-events: auto;
+}
+
+.featured-experiences-carousel .owl-nav [class*="owl-"] span {
+	color: inherit;
+}
+
+.featured-experiences-carousel .owl-nav [class*="owl-"]:hover {
+	background: #037d5d !important;
+	color: #fff !important;
+	transform: scale(1.1);
+}
+
+.featured-experiences-carousel .owl-nav .owl-prev {
+	left: -18px;
+}
+
+.featured-experiences-carousel .owl-nav .owl-next {
+	right: -18px;
+	left: auto;
 }
 
 .featured-experiences-carousel .owl-dots {
@@ -99,10 +198,135 @@
 	border-radius: 6px;
 }
 
+/* Blog carousel: limited view with arrows on left and right */
+.blog-carousel-wrapper {
+	position: relative;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 60px;
+}
+
+.blog-carousel {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.blog-carousel .item {
+	padding: 0 10px;
+}
+
+.blog-carousel .owl-stage-outer {
+	overflow: hidden;
+}
+
+.blog-carousel .owl-nav {
+	display: block !important;
+	position: absolute;
+	top: 32%;
+	left: 0;
+	right: 0;
+	margin: 0 !important;
+	padding: 0;
+	transform: translateY(-50%);
+	pointer-events: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.blog-carousel .owl-nav [class*="owl-"] {
+	position: absolute !important;
+	margin: 0 !important;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.9) !important;
+	color: #037d5d !important;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	transition: background 200ms ease, transform 200ms ease, color 200ms ease;
+	pointer-events: auto;
+}
+
+.blog-carousel .owl-nav [class*="owl-"] span {
+	color: inherit;
+}
+
+.blog-carousel .owl-nav [class*="owl-"]:hover {
+	background: #037d5d !important;
+	color: #fff !important;
+	transform: scale(1.1);
+}
+
+.blog-carousel .owl-nav .owl-prev {
+	left: -18px;
+}
+
+.blog-carousel .owl-nav .owl-next {
+	right: -18px;
+	left: auto;
+}
+
+.blog-carousel .owl-dots {
+	text-align: center;
+	margin-top: 20px;
+	display: block !important;
+}
+
+.blog-carousel .owl-dots .owl-dot {
+	display: inline-block;
+	zoom: 1;
+	margin: 0 5px;
+}
+
+.blog-carousel .owl-dots .owl-dot span {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(60, 179, 114, 0.3) !important;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.blog-carousel .owl-dots .owl-dot.active span,
+.blog-carousel .owl-dots .owl-dot:hover span {
+	background: #3cb372 !important;
+	width: 30px;
+	border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+	.blog-carousel-wrapper {
+		padding: 0 44px;
+	}
+	.blog-carousel .owl-nav [class*="owl-"] {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+}
+
 /* Mobile adjustments for Featured Experiences */
 @media (max-width: 767px) {
 	.featured-experiences-carousel .item {
 		padding: 0 5px;
+	}
+	
+	.featured-experiences-carousel .owl-nav [class*="owl-"] {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	
+	.featured-experiences-carousel .owl-nav .owl-prev {
+		left: -8px;
+	}
+	
+	.featured-experiences-carousel .owl-nav .owl-next {
+		right: -8px;
 	}
 	
 	.featured-experiences-carousel .owl-dots {
@@ -189,6 +413,20 @@
 @media (max-width: 767px) {
 	.story-carousel .item {
 		padding: 0 5px;
+	}
+	
+	.story-carousel .owl-nav [class*="owl-"] {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	
+	.story-carousel .owl-nav .owl-prev {
+		left: -8px;
+	}
+	
+	.story-carousel .owl-nav .owl-next {
+		right: -8px;
 	}
 	
 	.story-section .services.img {
@@ -287,6 +525,27 @@
 	.carousel-nav-right {
 		right: -60px;
 	}
+}
+
+/* Narrow gap between Book Now/Explore buttons and Why Triphita */
+.story-section {
+	padding-bottom: 1.5em !important;
+}
+.ftco-select-destination.ftco-section {
+	padding-top: 2em !important;
+	padding-bottom: 2em !important;
+}
+/* Narrow gap between Why Triphita (sustainability slider) and Featured Experiences */
+.ftco-select-destination.ftco-section + section.ftco-section {
+	padding-top: 2em !important;
+}
+.featured-experiences-section {
+	padding-top: 2em !important;
+	padding-bottom: 2em !important;
+}
+/* Narrow gap between Featured Experiences and video section */
+.ftco-about.ftco-section {
+	padding-top: 2em !important;
 }
 
 /* Pure CSS Slider (Radio-based) */
