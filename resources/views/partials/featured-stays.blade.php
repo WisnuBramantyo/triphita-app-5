@@ -2,14 +2,14 @@
 $featuredStays = [
 	[
 		'url' => '/activities/1',
-		'image' => 'images/kkc-fire.jpg',
-		'price' => 'Rp 8.250.000/orang',
-		'name' => 'Kampung Kopi Camp',
-		'location' => 'Pupuan, Tabanan, Bali',
+		'image' => 'images/sawah-kaiho-4.jpg',
+		'price' => 'Rp 500.000/orang',
+		'name' => 'Vintage Volkswagen Journey, Tanah Lot & Darma Village Cultural Immersion',
+		'location' => 'Bali, Indonesia',
 		'amenities' => [
 			['icon' => 'flaticon-shower', 'text' => '2'],
 			['icon' => 'flaticon-king-size', 'text' => '3'],
-			['icon' => 'flaticon-mountains', 'text' => 'Near Mountain']
+			['icon' => 'flaticon-mountains', 'text' => 'Full Day']
 		]
 	],
 	[
