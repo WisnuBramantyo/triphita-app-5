@@ -90,8 +90,8 @@
 				<div class="col-md-12 text-center">
 					<div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 1.5rem;">
 						@php
-	$waMessage = "Hello \nI'm interested in booking the following tour:\n\n Tour: {{tour_name}}\n Package: {{package_name}}\n Price: {{price}}\n\nCould you please help me with availability and booking details?\nThanks a lot!";
-	$waUrl = 'https://wa.me/6287818653533?text=' . rawurlencode($waMessage);
+	$waMessage = config('whatsapp.book_now_message');
+	$waUrl = 'https://wa.me/' . config('whatsapp.number') . '?text=' . rawurlencode($waMessage);
 @endphp
 						<a href="{{ $waUrl }}" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
 						<a href="{{ route('activities.index') }}" class="btn btn-primary py-3 px-4">Explore</a>
