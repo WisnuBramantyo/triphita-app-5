@@ -55,7 +55,6 @@ $featuredStays = [
 	<div class="container">
 		<div class="row justify-content-center pb-4">
 			<div class="col-md-12 heading-section text-center ftco-animate">
-				<span class="subheading">Destination</span>
 				<h2 class="mb-4">Featured Experiences</h2>
 			</div>
 		</div>

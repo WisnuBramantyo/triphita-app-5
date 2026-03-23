@@ -2,31 +2,31 @@
 $slides = [
 	[
 		'id' => 1,
-		'image' => '/images/clean-energy-and-transportation.jpg',
+		'image' => '/images/curated-not-crowded.jpg',
 		'title' => 'Curated, Not Crowded',
 		'description' => 'Every trip is thoughtfully designed,only experiences that respect people and place.'
 	],
 	[
 		'id' => 2,
-		'image' => 'images/water-conservation-and-management.jpg',
+		'image' => 'images/led-by-local-experts.jpg',
 		'title' => 'Led by Local Experts',
 		'description' => 'Our guided tours are hosted by locals and practitioners who share real stories, deep knowledge, and lived culture, not scripts.'
 	],
 	[
 		'id' => 3,
-		'image' => 'images/sustainable-food-systems.jpg',
+		'image' => 'images/adventure-with-intention.jpg',
 		'title' => 'Adventure With Intention',
 		'description' => 'From hikes to off-road journeys, our adventures reconnect you with nature while prioritizing safety, balance, and respect for the land.'
 	],
 	[
 		'id' => 4,
-		'image' => 'images/waste-reduction-and-recycling.jpg',
+		'image' => 'images/learn-by-doing.jpeg',
 		'title' => 'Learn by Doing',
 		'description' => 'Through hands-on workshops and classes, you don’t just watch culture, you take part in it, creating meaningful connection.'
 	],
 	[
 		'id' => 5,
-		'image' => 'images/sustainable-materials-and-products.jpg',
+		'image' => 'images/travel-that-gives-back.jpg',
 		'title' => 'Travel That Gives Back',
         'description' => 'Every experience supports local communities and sustainable practices, ensuring your journey creates positive impact beyond memories.'
 	]

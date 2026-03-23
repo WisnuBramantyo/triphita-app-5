@@ -24,7 +24,6 @@
     .activity-price-original { font-size: 14px; color: #999; text-decoration: line-through; margin-left: 6px; }
     .activity-discount { font-size: 12px; font-weight: 600; color: #3cb372; }
     .filter-sidebar .custom-control-label { cursor: pointer; }
-    .booked-count { font-size: 12px; color: #666; }
     #ftco-navbar.ftco-navbar-light { position: relative; top: 0; }
     .activities-search-section { padding-top: 1.5rem; }
 
@@ -208,9 +207,6 @@
                     <span class="days">{{ $activity['duration'] ?? '—' }}</span>
                     <h3><a href="{{ route('activities.show', $activity['id']) }}">{{ $activity['title'] ?? 'Activity' }}</a></h3>
                     <p class="location"><span class="fa fa-map-marker"></span> {{ $activity['location'] ?? '—' }}</p>
-                    <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
-                      <span class="booked-count"><span class="fa fa-users"></span> {{ $activity['booked_count'] ?? 0 }}+ booked</span>
-                    </div>
                     <div class="mt-2">
                       @if(!empty($activity['discount_percent']))
                         <span class="activity-discount">{{ $activity['discount_percent'] }}% off</span>
