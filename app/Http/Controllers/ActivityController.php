@@ -40,7 +40,7 @@ class ActivityController extends Controller
         ]);
     }
 
-    protected function getActivitiesList()
+    public function getActivitiesList()
     {
         return collect([
             [

@@ -7,6 +7,7 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ActivityController;
 
 Route::post('/submit-booking', [BookingController::class, 'booking'])->name('submit-booking');
 
@@ -32,7 +33,13 @@ Route::get('/', function () {
         ->orderBy('created_at', 'desc')
         ->limit(12)
         ->get();
-    return view('welcome', compact('blogs'));
+    $featuredActivities = app(ActivityController::class)
+        ->getActivitiesList()
+        ->sortByDesc('booked_count')
+        ->take(6)
+        ->values();
+
+    return view('welcome', compact('blogs', 'featuredActivities'));
 });
 
 Route::get('/search', [DestinationController::class, 'search'])->name('search');
