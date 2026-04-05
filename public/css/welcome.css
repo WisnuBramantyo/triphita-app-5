@@ -535,13 +535,70 @@
 	padding-top: 2em !important;
 	padding-bottom: 2em !important;
 }
-/* Narrow gap between Why Triphita (sustainability slider) and Featured Experiences */
+/* Spacing after sustainability slider (next section is usually video) */
 .ftco-select-destination.ftco-section + section.ftco-section {
 	padding-top: 2em !important;
 }
 .featured-experiences-section {
 	padding-top: 2em !important;
 	padding-bottom: 2em !important;
+}
+
+/* Same card styling as /activities (activities.blade.php inline styles) */
+.featured-experiences-section .activity-badge {
+	background: #3cb372;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 4px 10px;
+	border-radius: 4px;
+	position: absolute;
+	top: 44px;
+	left: 12px;
+	z-index: 2;
+}
+.featured-experiences-section .activity-card .project-wrap .text .days {
+	color: #3cb372;
+}
+.featured-experiences-section .activity-price-from {
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+}
+.featured-experiences-section .activity-price-original {
+	font-size: 14px;
+	color: #999;
+	text-decoration: line-through;
+	margin-left: 6px;
+}
+.featured-experiences-section .activity-discount {
+	font-size: 12px;
+	font-weight: 600;
+	color: #3cb372;
+}
+@media (max-width: 991.98px) {
+	.featured-experiences-section .activity-card .project-wrap .text h3 {
+		font-size: 1.1rem;
+	}
+	.featured-experiences-section .activity-price-from {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 575.98px) {
+	.featured-experiences-section .activity-badge {
+		font-size: 10px;
+		padding: 3px 8px;
+		top: 38px;
+	}
+	.featured-experiences-section .project-wrap .img .price {
+		font-size: 14px;
+		padding: 6px 10px;
+	}
+}
+
+.featured-experiences-section + .story-section {
+	padding-top: 2em !important;
 }
 /* Narrow gap between Featured Experiences and video section */
 .ftco-about.ftco-section {

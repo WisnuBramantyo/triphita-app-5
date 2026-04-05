@@ -35,6 +35,8 @@
 		</div>
 	</div>
 
+	@include('partials.featured-stays')
+
 	<section class="story-section">
 		<div class="container">
 			<div class="row justify-content-center pb-4">
@@ -102,8 +104,6 @@
 	</section>
 
 	@include('partials.sustainability-slider')
-
-	@include('partials.featured-stays')
 
 	<section class="ftco-section ftco-about img" style="background-image: url(images/kkc-welcome.jpg); margin-bottom: 60px;">
 		<div class="overlay"></div>
@@ -293,7 +293,7 @@
 						margin: 20
 					},
 					992: {
-						items: 4,
+						items: 3,
 						margin: 30
 					}
 				}
