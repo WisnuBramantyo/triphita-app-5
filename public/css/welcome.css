@@ -114,8 +114,31 @@
 	position: relative;
 }
 
+/*
+ * Owl Carousel 2 uses float:left + .owl-stage-outer { overflow: hidden }.
+ * Our cards use .price at top:-8px and a :after tab at left:-8px (style.css) — that gets clipped
+ * at the viewport edge, especially on the first/last visible slides. Production often differs
+ * from local (font/CDN, container width) so title line-wrap changes card height and looks misaligned.
+ */
+.featured-experiences-section .featured-experiences-carousel .owl-stage-outer {
+	padding-top: 14px;
+}
+
+.featured-experiences-section .project-wrap .img .price {
+	left: 28px;
+}
+
+.featured-experiences-section .project-wrap .text h3 {
+	min-height: 4.5em;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	line-height: 1.35;
+}
+
 .featured-experiences-carousel .item {
-	padding: 0 10px;
+	padding: 0 12px;
 }
 
 .featured-experiences-carousel .owl-nav {
@@ -555,7 +578,7 @@
 	border-radius: 4px;
 	position: absolute;
 	top: 44px;
-	left: 12px;
+	left: 18px;
 	z-index: 2;
 }
 .featured-experiences-section .activity-card .project-wrap .text .days {
@@ -590,10 +613,12 @@
 		font-size: 10px;
 		padding: 3px 8px;
 		top: 38px;
+		left: 14px;
 	}
 	.featured-experiences-section .project-wrap .img .price {
 		font-size: 14px;
 		padding: 6px 10px;
+		left: 22px;
 	}
 }
 

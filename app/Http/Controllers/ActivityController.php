@@ -87,7 +87,7 @@ class ActivityController extends Controller
             ],
             [
                 'id' => 4,
-                'title' => 'Conquer Sencond Highest and Bali’s Most Sacred Mountain',
+                'title' => 'Conquer Second Highest and Bali’s Most Sacred Mountain',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Guided Tour, Workshop & Class, Adventure',
                 'rating' => 4.9,
@@ -232,7 +232,7 @@ class ActivityController extends Controller
             ],
             4 => [
                 'id' => 4,
-                'title' => 'Batukaru Mountain Hiking – Conquer  Sencond Highest and Bali’s Most Sacred Mountain',
+                'title' => 'Batukaru Mountain Hiking – Conquer Second Highest and Bali’s Most Sacred Mountain',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Experiences',
                 'rating' => 4.9,
