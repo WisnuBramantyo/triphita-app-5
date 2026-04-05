@@ -117,15 +117,15 @@
           <span class="cat-pill-icon fa fa-th-large"></span>
           <span>All</span>
         </a>
-        <a class="cat-pill {{ $category === 'Tours' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'Tours', 'sort' => $sort, 'q' => request('q')]) }}">
+        <a class="cat-pill {{ $category === 'adventures' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'adventures', 'sort' => $sort, 'q' => request('q')]) }}">
           <span class="cat-pill-icon fa fa-compass"></span>
           <span>Adventures</span>
         </a>
-        <a class="cat-pill {{ $category === 'Experiences' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'Experiences', 'sort' => $sort, 'q' => request('q')]) }}">
+        <a class="cat-pill {{ $category === 'guided_tours' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'guided_tours', 'sort' => $sort, 'q' => request('q')]) }}">
           <span class="cat-pill-icon fa fa-map-signs"></span>
           <span>Guided Tours</span>
         </a>
-        <a class="cat-pill {{ $category === 'Workshops' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'Workshops', 'sort' => $sort, 'q' => request('q')]) }}">
+        <a class="cat-pill {{ $category === 'workshops' ? 'active' : '' }}" href="{{ route('activities.index', ['category' => 'workshops', 'sort' => $sort, 'q' => request('q')]) }}">
           <span class="cat-pill-icon fa fa-paint-brush"></span>
           <span>Workshops & Classes</span>
         </a>
@@ -137,7 +137,7 @@
     <div class="container">
       <div class="row">
         @php
-          $sortLabels = ['popular' => 'Popular', 'price_low' => 'Lowest price first', 'price_high' => 'Highest price first', 'rating' => 'Highest rating first'];
+          $sortLabels = ['popular' => 'Popular', 'price_low' => 'Lowest price first', 'price_high' => 'Highest price first'];
           $currentSortLabel = $sortLabels[$sort] ?? 'Popular';
         @endphp
         <div class="col-12 col-lg-3 order-1 order-lg-1 d-none d-lg-block">
@@ -166,12 +166,6 @@
                       <label class="custom-control-label" for="sort-price-high">Highest price first</label>
                     </div>
                   </li>
-                  <li class="mb-2">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" id="sort-rating" name="sort" value="rating" class="custom-control-input" {{ $sort === 'rating' ? 'checked' : '' }} onchange="document.getElementById('filter-form').submit()">
-                      <label class="custom-control-label" for="sort-rating">Highest rating first</label>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </form>
@@ -189,7 +183,6 @@
                 <a href="{{ route('activities.index', ['category' => $category, 'sort' => 'popular', 'q' => request('q')]) }}" class="{{ $sort === 'popular' ? 'active' : '' }}">Popular</a>
                 <a href="{{ route('activities.index', ['category' => $category, 'sort' => 'price_low', 'q' => request('q')]) }}" class="{{ $sort === 'price_low' ? 'active' : '' }}">Lowest price first</a>
                 <a href="{{ route('activities.index', ['category' => $category, 'sort' => 'price_high', 'q' => request('q')]) }}" class="{{ $sort === 'price_high' ? 'active' : '' }}">Highest price first</a>
-                <a href="{{ route('activities.index', ['category' => $category, 'sort' => 'rating', 'q' => request('q')]) }}" class="{{ $sort === 'rating' ? 'active' : '' }}">Highest rating first</a>
               </div>
             </div>
           </div>

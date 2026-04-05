@@ -11,8 +11,20 @@ class ActivityController extends Controller
         $activities = $this->getActivitiesList();
 
         $category = $request->get('category', 'all');
+        $legacyCategoryMap = [
+            'Tours' => 'adventures',
+            'Experiences' => 'guided_tours',
+            'Workshops' => 'workshops',
+        ];
+        if (isset($legacyCategoryMap[$category])) {
+            $category = $legacyCategoryMap[$category];
+        }
+        $allowedCategories = ['all', 'adventures', 'guided_tours', 'workshops'];
+        if (! in_array($category, $allowedCategories, true)) {
+            $category = 'all';
+        }
         if ($category !== 'all') {
-            $activities = $activities->filter(fn ($a) => ($a['category'] ?? '') === $category);
+            $activities = $activities->filter(fn ($a) => $this->activityMatchesFilterCategory($a, $category));
         }
 
         $search = $request->get('q');
@@ -25,10 +37,12 @@ class ActivityController extends Controller
         }
 
         $sort = $request->get('sort', 'popular');
+        if (! in_array($sort, ['popular', 'price_low', 'price_high'], true)) {
+            $sort = 'popular';
+        }
         $activities = match ($sort) {
             'price_low' => $activities->sortBy('price_from'),
             'price_high' => $activities->sortByDesc('price_from'),
-            'rating' => $activities->sortByDesc('rating'),
             default => $activities->sortByDesc('booked_count'),
         };
 
@@ -38,6 +52,21 @@ class ActivityController extends Controller
             'sort' => $sort,
             'q' => $search,
         ]);
+    }
+
+    /**
+     * Category pills use slugs; list data uses combined labels like "Guided Tour, Workshop & Class, Adventure".
+     */
+    protected function activityMatchesFilterCategory(array $activity, string $filter): bool
+    {
+        $haystack = strtolower((string) ($activity['category'] ?? ''));
+
+        return match ($filter) {
+            'adventures' => str_contains($haystack, 'adventure'),
+            'guided_tours' => str_contains($haystack, 'guided tour'),
+            'workshops' => str_contains($haystack, 'workshop'),
+            default => false,
+        };
     }
 
     public function getActivitiesList()
@@ -51,7 +80,7 @@ class ActivityController extends Controller
                 'rating' => 4.9,
                 'review_count' => 2847,
                 'duration' => 'Full Day (8 hours)',
-                'image' => '/images/sawah-kaiho-4.jpg',
+                'image' => '/images/sawah-kaiho-3.jpg',
                 'price_from' => 500000,
                 'price_original' => 800000,
                 'booked_count' => 500,
@@ -61,7 +90,7 @@ class ActivityController extends Controller
                 'id' => 2,
                 'title' => '4WD Jeep Adventure in Pupuan, Tabanan',
                 'location' => 'Bali, Indonesia',
-                'category' => 'Guided Tour, Workshop & Class, Adventure',
+                'category' => 'Adventure',
                 'rating' => 4.8,
                 'review_count' => 1203,
                 'duration' => 'Half Day (3 hours)',
@@ -75,7 +104,7 @@ class ActivityController extends Controller
                 'id' => 3,
                 'title' => 'Sustainable Food Waste Processing Experience',
                 'location' => 'Bali, Indonesia',
-                'category' => 'Guided Tour, Workshop & Class',
+                'category' => 'Workshop & Class',
                 'rating' => 4.7,
                 'review_count' => 856,
                 'duration' => '3–4 hours',
@@ -89,7 +118,7 @@ class ActivityController extends Controller
                 'id' => 4,
                 'title' => 'Conquer Second Highest and Bali’s Most Sacred Mountain',
                 'location' => 'Bali, Indonesia',
-                'category' => 'Guided Tour, Workshop & Class, Adventure',
+                'category' => 'Adventure',
                 'rating' => 4.9,
                 'review_count' => 442,
                 'duration' => 'Full Day (8 hours)',
@@ -134,8 +163,8 @@ class ActivityController extends Controller
                 'duration' => '8 hours (full day tour)',
                 'group_size' => '2 - ∞ people',
                 'images' => [
-                    '/images/sawah-kaiho-4.jpg',
                     '/images/sawah-kaiho-3.jpg',
+                    '/images/sawah-kaiho-4.jpg',
                     '/images/sawah-kaiho-2.jpg',
                     '/images/sawah-kaiho-1.jpg',
                     '/images/sawah-kaiho-5.jpg',
