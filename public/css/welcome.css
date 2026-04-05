@@ -495,8 +495,9 @@
 	}
 }
 
-/* Enhanced Stay Button */
-.story-section .btn-primary {
+/* Enhanced primary CTA (hero + Welcome story buttons) */
+.story-section .btn-primary,
+.hero-wrap .btn-primary {
 	background: linear-gradient(135deg, #037d5d 0%, #023f2f 100%);
 	border: 2px solid #037d5d;
 	border-radius: 50px;
@@ -512,9 +513,20 @@
 }
 
 .story-section .btn-primary span,
-.story-section .btn-primary {
+.story-section .btn-primary,
+.hero-wrap .btn-primary {
 	position: relative;
 	z-index: 1;
+}
+
+.story-section .btn-primary:hover,
+.hero-wrap .btn-primary:hover,
+.story-section .btn-primary:focus,
+.hero-wrap .btn-primary:focus {
+	background: linear-gradient(135deg, #049670 0%, #035242 100%);
+	border-color: #049670;
+	color: #fff;
+	box-shadow: 0 6px 20px rgba(3, 125, 93, 0.4);
 }
 
 /* Responsive Navigation Arrows */

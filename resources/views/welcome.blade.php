@@ -24,12 +24,20 @@
 <body>
 	@include('partials.nav')
 
+	@php
+		$waMessage = config('whatsapp.book_now_message');
+		$waUrl = 'https://wa.me/' . config('whatsapp.number') . '?text=' . rawurlencode($waMessage);
+	@endphp
+
 	<div class="hero-wrap" style="background-image: url('images/kkc-vibe-top.jpg'); padding-top: 100px; margin-top: 50px;">
 		<div class="container">
 			<div class="row justify-content-center align-items-center" style="height: 100%;">
 				<div class="col-md-10 text-center">
 					<h2 class="hero-wrap-title">Discover Your Favorite Place with Us</h2>
 					<p>Travel to the corner of the world, sustainably</p>
+					<div class="mt-4">
+						<a href="{{ $waUrl }}" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -91,10 +99,6 @@
 			<div class="row justify-content-center mt-4">
 				<div class="col-md-12 text-center">
 					<div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 1.5rem;">
-						@php
-	$waMessage = config('whatsapp.book_now_message');
-	$waUrl = 'https://wa.me/' . config('whatsapp.number') . '?text=' . rawurlencode($waMessage);
-@endphp
 						<a href="{{ $waUrl }}" class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">Book Now</a>
 						<a href="{{ route('activities.index') }}" class="btn btn-primary py-3 px-4">Explore</a>
 					</div>
