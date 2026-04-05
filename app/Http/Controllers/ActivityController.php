@@ -116,7 +116,7 @@ class ActivityController extends Controller
             ],
             [
                 'id' => 4,
-                'title' => 'Conquer Second Highest and Bali’s Most Sacred Mountain',
+                'title' => 'Mount Batukaru Hiking',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Adventure',
                 'rating' => 4.9,
@@ -261,7 +261,7 @@ class ActivityController extends Controller
             ],
             4 => [
                 'id' => 4,
-                'title' => 'Batukaru Mountain Hiking – Conquer Second Highest and Bali’s Most Sacred Mountain',
+                'title' => 'Mount Batukaru Hiking',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Experiences',
                 'rating' => 4.9,
