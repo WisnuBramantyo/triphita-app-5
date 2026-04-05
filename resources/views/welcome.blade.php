@@ -64,7 +64,7 @@
 						
 						<!-- Slide 2: Guided Tour -->
 						<div class="item">
-							<div class="services services-1 color-2 d-block img" style="background-image: url(images/guided-tour.jpeg);">
+							<div class="services services-1 color-2 d-block img" style="background-image: url(images/guided-tour.jpg);">
 								<div class="media-body">
 									<h3 class="heading mb-3">Guided Tour</h3>
 									<p>For travelers who want to understand, not just observe.</p>
@@ -75,7 +75,7 @@
 						
 						<!-- Slide 3: Workshop & Class -->
 						<div class="item">
-							<div class="services services-1 color-3 d-block img" style="background-image: url(images/workshop-class.jpg);">
+							<div class="services services-1 color-3 d-block img" style="background-image: url(images/workshop-and-class.jpeg);">
 								<div class="media-body">
 									<h3 class="heading mb-3">Workshop & Class</h3>
 									<p>For hands-on learners and curious minds.</p>

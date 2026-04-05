@@ -45,7 +45,7 @@ class ActivityController extends Controller
         return collect([
             [
                 'id' => 1,
-                'title' => 'Vintage Volkswagen Tabanan Journey',
+                'title' => 'Village Journey With Vintage Volkswagen',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Guided Tour, Workshop & Class, Adventure',
                 'rating' => 4.9,
@@ -79,7 +79,7 @@ class ActivityController extends Controller
                 'rating' => 4.7,
                 'review_count' => 856,
                 'duration' => '3–4 hours',
-                'image' => '/images/kkc-sustainable-stays.jpg',
+                'image' => '/images/magifarm-1.jpeg',
                 'price_from' => 300000,
                 'price_original' => 550000,
                 'booked_count' => 180,
@@ -93,7 +93,7 @@ class ActivityController extends Controller
                 'rating' => 4.9,
                 'review_count' => 442,
                 'duration' => 'Full Day (8 hours)',
-                'image' => '/images/kkc-welcome.jpg',
+                'image' => '/images/batukaru-mount.jpeg',
                 'price_from' => 500000,
                 'price_original' => 800000,
                 'booked_count' => 210,
@@ -126,7 +126,7 @@ class ActivityController extends Controller
         return [
             1 => [
                 'id' => 1,
-                'title' => 'Vintage Volkswagen Tabanan Journey',
+                'title' => 'Village Journey With Vintage Volkswagen',
                 'location' => 'Bali, Indonesia',
                 'category' => 'Experiences',
                 'rating' => 4.9,
@@ -139,6 +139,7 @@ class ActivityController extends Controller
                     '/images/sawah-kaiho-2.jpg',
                     '/images/sawah-kaiho-1.jpg',
                     '/images/sawah-kaiho-5.jpg',
+                    '/images/vintage-volkswagen-landscape.jpg',
                 ],
                 'video_url' => 'https://youtube.com/shorts/SRqX_7M1MuU',
                 'description' => "Travel at a slower, more meaningful pace in a classic Volkswagen as you journey through Bali's landscapes and living traditions. This full day guided experience begins with an iconic visit to Tanah Lot, followed by immersive time in Darma Village to learn local life, rituals, and architecture.",
@@ -204,9 +205,9 @@ class ActivityController extends Controller
                 'duration' => '3-4 hours',
                 'group_size' => '5 people',
                 'images' => [
-                    '/images/kkc-sustainable-stays.jpg',
-                    '/images/sawah-kaiho-2.jpg',
-                    '/images/sawah-kaiho-1.jpg',
+                    '/images/magifarm-1.jpeg',
+                    '/images/magifarm-2.jpeg',
+                    '/images/magifarm-3.jpeg'
                 ],
                 'video_url' => 'https://youtube.com/shorts/SRqX_7M1MuU',
                 'description' => "Curious about how food waste can be transformed into a valuable resource? This immersive 2-hour guided experience offers a meaningful introduction to sustainable waste management in a real working environment.Following the introduction, you will explore a modern food waste treatment facility, observing firsthand how organic waste is processed through sustainable methods. Your guide will explain each stage of the system, from waste collection to biological conversion, highlighting how nature-based solutions can support regenerative agriculture and responsible resource management. The experience begins with an engaging discussion on the challenges of food waste and the importance of circular solutions in modern sustainability practices. You will learn how innovative biological systems, including the use of black soldier flies, can efficiently convert organic waste into nutrient-rich compost and fertilizer while reducing environmental impact. The experience concludes with a hands-on activity where you will harvest larvae and collect nutrient-rich fertilizer derived from processed food waste. You will also receive a small sample of compost to take home, offering a tangible connection to the circular sustainability process and a deeper appreciation of how waste can be transformed into a beneficial resource.",
@@ -239,9 +240,8 @@ class ActivityController extends Controller
                 'duration' => 'Full Day',
                 'group_size' => '2 people',
                 'images' => [
-                    '/images/kkc-welcome.jpg',
-                    '/images/sawah-kaiho-5.jpg',
-                    '/images/sawah-kaiho-3.jpg',
+                    '/images/batukaru-mount.jpeg',
+                    '/images/batukaru-mount-2.jpeg'
                 ],
                 'video_url' => 'https://youtube.com/shorts/SRqX_7M1MuU',
                 'description' => "Escape the crowds and experience one of Bali’s most untouched and spiritual landscapes with a guided hike to Mount Batukaru, Bali’s second-highest volcano and one of its most sacred peaks. This is more than just a hike. It’s a journey into Bali’s deep rainforest, cool mountain air, and serene highland energy. Mount Batukaru Hiking offers a rewarding and adventurous trek through lush tropical forest, misty trails, and pristine natural surroundings. The terrain is challenging but well-managed, making it ideal for travelers seeking a more serious outdoor experience, without compromising safety.",

@@ -2,7 +2,7 @@
 $slides = [
 	[
 		'id' => 1,
-		'image' => '/images/curated-not-crowded.jpg',
+		'image' => '/images/curated-not-crowded.png',
 		'title' => 'Curated, Not Crowded',
 		'description' => 'Every trip is thoughtfully designed,only experiences that respect people and place.'
 	],
@@ -14,7 +14,7 @@ $slides = [
 	],
 	[
 		'id' => 3,
-		'image' => 'images/adventure-with-intention.jpg',
+		'image' => 'images/adventure-with-intention.png',
 		'title' => 'Adventure With Intention',
 		'description' => 'From hikes to off-road journeys, our adventures reconnect you with nature while prioritizing safety, balance, and respect for the land.'
 	],
